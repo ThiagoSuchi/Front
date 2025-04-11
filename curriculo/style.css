@@ -17,7 +17,6 @@
 .menu_conteudo {
     display: flex;
     margin: 0 auto;
-    gap: 5rem;
     max-width: 1200px;
     letter-spacing: 1px;
     list-style-type: none;
@@ -26,18 +25,23 @@
 .menu_links {
     color: white;
     text-decoration: none;
-    padding: 8px;
+    padding: 0px 70px 0px 70px;
+    transition: .1s all;
 }
 
 .menu_links:hover {
-    background-color: grey;
-    border-radius: 5px;
-    padding: 8px;
-}
+    background-color: rgb(83, 83, 83);
+    border-radius: 3px;
+    padding: 10px 70px 10px 70px;
+} 
 
 .info {
-    background: rgb(68,164,85);
-    background: linear-gradient(32deg,  rgb(102, 102, 102) 10%, rgba(68,164,85,1) 100%);
+    background: 
+    linear-gradient(32deg,  rgb(102, 102, 102, 0.5) 10%, 
+    rgba(68,164,85, 0.7) 100%), 
+    url('./img/pexels-pixabay-256502.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     padding:  100px 0px 25px;
     text-align: center;
