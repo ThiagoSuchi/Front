@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.cabecalho li {
+    cursor: pointer;
+}
+
+.menu {
+    background-color: rgb(68, 68, 68);
+    color: white;
+    padding: 15px;
+}
+
+.menu_conteudo {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    letter-spacing: 1px;
+    list-style-type: none;
+}
+
+.menu_links {
+    color: white;
+    text-decoration: none;
+    padding: 0px 70px 0px 70px;
+    transition: .1s all;
+}
+
+.menu_links:hover {
+    background-color: rgb(83, 83, 83);
+    border-radius: 3px;
+    padding: 10px 70px 10px 70px;
+} 
+
+.info {
+    background: 
+    linear-gradient(32deg,  rgb(102, 102, 102, 0.5) 10%, 
+    rgba(68,164,85, 0.7) 100%), 
+    url('./img/pexels-pixabay-256502.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding:  100px 0px 25px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.img {
+    border-radius: 100%;
+    width: 100px;
+    border: 2px solid white;
+}
+
+.conteudo {
+    background-color: rgb(68, 68, 68);
+    padding: 10px 20px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.conteudo > div {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color:  rgb(102, 102, 102);
+    padding: 30px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.titulo {
+    color: rgb(82, 204, 82);
+    padding: 40px 0px 12px;
+}
+
+.texto {
+    line-height: 1.8;
+}
+
+.galeria-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.galeria {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10rem;
+    border-radius: 10px;
+    border: 1px solid rgb(68,164,85);
+    gap: 10rem;
+    transition: .1s ease-in-out all;
+}
+
+.galeria:hover {
+    transform: scale(1.05);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    margin-top: 2rem;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.rodape_conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
