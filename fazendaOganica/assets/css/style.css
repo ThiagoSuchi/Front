@@ -1,0 +1,64 @@
+:root {
+    --cor-cbc: #1B4436;
+    --cor-card: #4a5e4c;
+    --cor-texto: #1f3122;
+    --cor-paragrafo: #8ca18e;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Cabeçalho */
+.navbar {
+    background-color: var(--cor-cbc);
+    height: 50px;
+}
+
+.cbc-menu {
+    display: flex;
+    padding: 10px;
+}
+
+/* Lista de Produtos */
+
+.card-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px;
+}
+
+.card {
+    border: 2px solid var(--cor-card);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-width: 386px;
+}
+
+.paragrafo-div {
+    background: var(--cor-paragrafo);
+}
+
+.card-texto, .card-titulo {
+    padding: 8px;
+    color: var(--cor-texto);
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-card);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.card-link {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
