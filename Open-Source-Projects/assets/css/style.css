@@ -1,6 +1,26 @@
+:root {
+    --color-default: #ffffff;
+    --color-grey: #5F6369;
+    --color-text: black;
+    --color-span: #EADD67CC;
+    --color-description: #202124;
+    --color-footer: #38393F;
+    --color-border: #CECECE;
+    --btn-ver-projetos: #1C73E8;
+    --background-color-chromium: #B6D5FF;
+    --background-color-react: #C5F3FF;
+    --background-color-ubunto: #F6C29D;
+    --background-color-git: #F7B7AD;
+    --background-color-android: #B6F5D5;
+    --background-color-typescript: #B9DBFD;
+    --background-color-tensorflow: #FAE5B1;
+    --background-color-docusaurus: #ADF5BF;
+}
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -10,8 +30,8 @@ header {
 }
 
 header .hero {
-    background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(182, 212, 255, 0.5) 0%),
-    url('../img/pexels-markus-winkler-1430818-4584830\ 1.png');
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(182, 212, 255, 0.5) 0%),
+        url('../img/pexels-markus-winkler-1430818-4584830\ 1.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -19,15 +39,16 @@ header .hero {
     object-fit: cover;
     display: block;
 }
-  
+
 header h1 {
     position: absolute;
     top: 50%;
-    left: 70%;
-    width:100%;
+    left: 55%;
+    width: 100%;
     transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 8rem;
+    color: var(--color-text);
+    font-size: 9rem;
+    font-weight: 700;
 }
 
 .search-box {
@@ -39,14 +60,10 @@ header h1 {
 .search-box input {
     width: 100%;
     padding: 10px 42px 10px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     outline: none;
     font-size: 16px;
-}
-
-.search-box input:focus {
-    border: 1px dashed #00aaff;
 }
 
 .search-btn {
@@ -64,30 +81,135 @@ header h1 {
 }
 
 .projects {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 24px;
+    display: flex;
+    margin-bottom: 170px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .projects .tec {
-    border: 2px solid #CECECE;
-    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
     width: 332px;
-    height: 495px;
+    max-height: 495px;
 }
 
 .projects .tec .background-img {
     display: flex;
-    background-color: #00aaff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     width: 332px;
     height: 185px;
+}
+
+.bckg-chromium {
+    background-color: var(--background-color-chromium);
+}
+
+.bckg-react {
+    background-color: var(--background-color-react);
+}
+
+.bckg-ubunto {
+    background-color: var(--background-color-ubunto);
+}
+
+.bckg-git {
+    background-color: var(--background-color-git);
+}
+
+.bckg-android {
+    background-color: var(--background-color-android);
+}
+
+.bckg-typescript {
+    background-color: var(--background-color-typescript);
+}
+
+.bckg-tensorflow {
+    background-color: var(--background-color-tensorflow);
+}
+
+.bckg-docusaurus {
+    background-color: var(--background-color-docusaurus);
 }
 
 .projects .tec .background-img img {
     margin: auto 30%;
 }
 
-.projects .tec .content{
+.projects .tec .content {
     padding: 8px 9px 78px 16px;
+}
+
+.content h2 {
+    padding: 8px 0px 8px 0px;
+    font-weight: 400;
+}
+
+.content p {
+    line-height: 24px;
+}
+
+.technology {
+    gap: 8px;
+    display: flex;
+    margin-top: 70px;
+}
+
+.technology button {
+    padding: 5px;
+    font-size: 16px;
+    background: none;
+    font-weight: 500;
+    border-radius: 4px;
+    color: var(--color-grey);
+    border: 1px solid var(--color-grey);
+}
+
+.ver-projetos {
+    width: 131px;
+    height: 35px;
+    font-size: 14px;
+    margin-top: 23px;
+    font-weight: 700;
+    background: none;
+    border-radius: 4px;
+    transition: .1s ease-in-out;
+    color: var(--btn-ver-projetos);
+    border: 1px solid var(--color-border);
+}
+
+.ver-projetos:hover {
+    color: var(--color-default);
+    background: var(--btn-ver-projetos);
+    border: 1px solid var(--color-border);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36px;
+    color: var(--color-default);
+    padding: 29px 21px 126px 21px;
+    background-color: var(--color-description);
+}
+
+.description span {
+    padding: 4px;
+    border-radius: 4px;
+    color: var(--color-text);
+    background: var(--color-span);
+}
+
+footer {
+    gap: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-footer);
 }
