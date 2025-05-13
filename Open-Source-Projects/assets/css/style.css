@@ -78,6 +78,7 @@ header h1 {
 }
 
 .projects .tec .background-img {
+    display: flex;
     background-color: #00aaff;
     width: 332px;
     height: 185px;
