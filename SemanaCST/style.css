@@ -7,7 +7,6 @@
 /*-------- Header ---------*/
 .cabecalho {
     position: fixed;
-    z-index: 1;
     opacity: 0.8;
     font-weight: 400;
     background-color: gray;
@@ -24,12 +23,12 @@
     background-color: #E5E5E5B2;
 }
 
-.cabecalho a{
+.cabecalho a {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
 
-.cabecalho a span{
+.cabecalho a span {
     border-radius: 5px;
     background-color: #E74C3C;
     padding: 5px 29px;
@@ -39,33 +38,56 @@
 
 /*---------------- HEADER ----------------*/
 header {
-    position: relative;
     width: 100%;
     height: 571px;
-    overflow: hidden;
-}
-
-header img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('./img/fundo_cabecalho.jpg');
 }
 
 .sobre {
-    position: absolute;
-    top: 12rem;
-    width: 100%;
-    background-color: #FFD200B2;
-    z-index: 1;
+    gap: 41px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faixa-amarela {
+    display: flex;
+    margin-top: 183px;
+    flex-direction: row-reverse;
+    padding: 48px 120px 48px 0px;
+    background-color: #ffd000ad;
+}
+
+.faixa-amarela h1 {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.bloco-amarelo {
+    width: 367px;
+    height: 138px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 115px 0px auto;
+    background-color: #ffd000ad;
+}
+
+.bloco-amarelo h3 {
+    text-align: end;
+    font-size: 32px;
+    font-weight: 400;
 }
 
 
 /*----------------- MAIN - Programação -----------------*/
 main {
-    left: 125px;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 42px 125px 0px 125px;
 }
 
 main p {
@@ -75,4 +97,73 @@ main p {
 
 main p span {
     font-weight: 700;
+}
+
+.programacao {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.programacao h1 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.evento .data {
+    margin-bottom: 30px;
+}
+
+.mentor {
+    gap: 31px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.mentor-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.mentor-info h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+/*------------- Localização ------------- */
+.localizacao h1 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 106px 0px 25px 125px;
+}
+
+.localizacao .img {
+    width: 100%;
+    height: 560px;
+}
+
+/*-------------- FOOTER ---------------*/
+footer {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    background-color: #2D3748CC;
+}
+
+footer .realizacao {
+    margin-left: 125px;
+}
+
+.realizacao h1 {
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.realizacao img {
+    margin-right: 60px;
 }
