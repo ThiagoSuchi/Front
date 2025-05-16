@@ -1,0 +1,70 @@
+ :root {
+    --cor-roxa-cabecalho: #7F8FC7;
+ }
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Inter", sans-serif;
+ }
+
+
+/*----- HEADER -----*/
+.cbc-menu nav ul{
+    gap: 16px;
+    padding: 20px;
+    display: flex;
+    color: white;
+    padding-left: 20px;
+    flex-direction: row;
+    background-color: var(--cor-roxa-cabecalho);
+}
+
+.cbc-menu li {
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.hero {
+    height: 512px;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(90deg,rgba(127, 143, 199, 0.6) 100%, rgba(182, 213, 255, 0.93) 100%),
+     url('../img/background-hero.jpg');
+}
+
+.hero img {
+    margin: auto;
+}
+
+
+/*----- MAIN / Transparencia -----*/
+.transparencia {
+    display: flex;
+    padding: 3rem;
+    margin-top: 4rem;
+    gap: 7rem;
+}
+
+.transparencia .titulo-texto h1 {
+    font-size: 20pt;
+    font-weight: 500;
+    margin-bottom: 5rem;
+}
+
+.transparencia .titulo-texto p {
+    font-size: 16pt;
+    margin-bottom: 1rem;
+}
+
+
+/*----- MAIN / Metas -----*/
+/* .metas {
+    padding: 3rem;
+}
+
+.metas .metaI {
+    display: flex;
+} */
