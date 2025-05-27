@@ -11,6 +11,7 @@
       <div>
         <label for="cep">CEP</label>
         <input type="text" id="cep" placeholder="Ex.: 76984-000" />
+        <div class="erro"></div>
       </div>
       <div>
         <label for="logradouro">Logradouro</label>
@@ -25,12 +26,16 @@
         <input type="text" id="bairro" placeholder="Ex.: Jardim Aparecida" />
       </div>
       <div>
-        <label for="cidade">Cidade</label>
-        <input type="text" id="cidade" placeholder="Ex.: Jueri" />
+        <label for="estado">Estado</label>
+        <select id="estado">
+          <option value="">Selecione um estado</option>
+        </select>
       </div>
       <div>
-        <label for="estado">Estado</label>
-        <input type="text" id="estado" placeholder="Ex.: Mato-Grosso" />
+        <label for="cidade">Cidade</label>
+        <select id="cidade" disabled>
+          <option value="">Selecione uma cidade</option>
+        </select>
       </div>
     </form>
     <script type="module" src="/src/main.ts"></script>

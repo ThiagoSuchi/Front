@@ -1,0 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.erro {
+    margin-left: 10%;
+    color: rgb(194, 50, 50);
+    font-size: 10pt;
+}
