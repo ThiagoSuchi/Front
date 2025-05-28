@@ -1,4 +1,4 @@
-import './style.css'
+import './assets/css/style.css'
 
 import type { Estado } from './interface/Estado';
 import type { Cep } from './interface/CepType';
@@ -20,8 +20,6 @@ cep.addEventListener('blur', async () => {
     limparForm()
     optionUndefined(cidadeSelect, '...')
     optionUndefined(estadoSelect, '...')
-    cidadeSelect.disabled = true;
-    estadoSelect.disabled = true
     return
   }
 
@@ -42,11 +40,11 @@ fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/')
 
 // Iterando sobre o estado selecionado, e mostrando suas respectivas cidades
 estadoSelect.addEventListener('change', () => {
-  const estadoSigla = estadoSelect.value;
+  const estadoNome = estadoSelect.value;
   optionUndefined(cidadeSelect, '...')
   cidadeSelect.disabled = true;
 
-  fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoSigla}/municipios`)
+  fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoNome}/municipios`)
     .then(res => res.json())
     .then(cidades => {
       optionUndefined(cidadeSelect, 'Selecione uma cidade') // Só será possível adicionar uma cidade se o cep for válido.
