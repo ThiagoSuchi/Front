@@ -2,35 +2,33 @@ import './style.css'
 
 import type { Estado } from './interface/Estado';
 import type { Cep } from './interface/CepType';
-import { cidadeEstadoOrdenado, criarOptionElement, limparForm } from './utils/helpers';
+import { cidadeEstadoOrdenado, criarOptionElement, limparForm, optionUndefined } from './utils/helpers';
 import { consultarCep } from './service/cepService';
+import { validaCep } from './utils/validator/validCep';
 
 const cep = document.getElementById('cep') as HTMLInputElement;
 const cidadeSelect = document.getElementById('cidade') as HTMLSelectElement;
 const estadoSelect = document.getElementById('estado') as HTMLSelectElement;
-const erroMessage = document.querySelector('.erro') as HTMLDivElement;
+
 
 cep.addEventListener('blur', async () => {
   const cepValue = cep.value.trim();
+  const isValid = validaCep(cepValue);
 
-  // Evita que a menssagem de erro multiplique a cada atualizada
-  erroMessage.innerHTML = ""
-
-  // Validando o cep
-  if (!cepValue || cepValue.length !== 8) {
-    const error = document.createElement('p');
-    error.innerHTML = "<p>CEP inválido.</P>";
-    erroMessage.appendChild(error);
-    
-    return limparForm();
+  // Se o cep for inválido os campos são limpos para não retornar undefined
+  if (!isValid) {
+    limparForm()
+    optionUndefined(cidadeSelect, '...')
+    optionUndefined(estadoSelect, '...')
+    cidadeSelect.disabled = true;
+    estadoSelect.disabled = true
+    return
   }
-
-  // Remove o erro
-  erroMessage.innerHTML = ""
 
   consultarCep();
 });
 
+// Requisição de api dos estados
 fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/')
   .then(res => res.json())
   .then((estados: Estado[]) => {
@@ -42,15 +40,16 @@ fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/')
     });
   });
 
+// Iterando sobre o estado selecionado, e mostrando suas respectivas cidades
 estadoSelect.addEventListener('change', () => {
   const estadoSigla = estadoSelect.value;
-  cidadeSelect.innerHTML = "<option>...</option>";
+  optionUndefined(cidadeSelect, '...')
   cidadeSelect.disabled = true;
 
   fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoSigla}/municipios`)
     .then(res => res.json())
     .then(cidades => {
-      cidadeSelect.innerHTML = "<option>Selecione uma cidade</option>"
+      optionUndefined(cidadeSelect, 'Selecione uma cidade') // Só será possível adicionar uma cidade se o cep for válido.
 
       const cidadeOrdenada = cidadeEstadoOrdenado(cidades)
 

@@ -3,7 +3,8 @@ import type { Cep } from "../interface/CepType";
 const logradouro = document.getElementById('logradouro') as HTMLInputElement;
 const bairro = document.getElementById('bairro') as HTMLInputElement;
 
-function cidadeEstadoOrdenado(element: Cep[]): Array<Cep> {// element é do tipo array de objetos, com uma chave nome do tipo string
+// element é do tipo array de objetos, com uma chave nome do tipo string
+function cidadeEstadoOrdenado(element: Cep[]): Array<Cep> {
   return element.sort((a, b) => a.nome.localeCompare(b.nome))
 }
 
@@ -12,6 +13,10 @@ function limparForm() {
   bairro.value = "";
 };
 
+function optionUndefined(elementSelect: HTMLSelectElement, option: string): void {
+  elementSelect.innerHTML = `<option>${option}</option>`
+}
+
 function criarOptionElement({ id, nome }: Cep, element: HTMLSelectElement) {
   const option = document.createElement('option');
   option.value = String(id);
@@ -19,4 +24,4 @@ function criarOptionElement({ id, nome }: Cep, element: HTMLSelectElement) {
   element.appendChild(option);
 }
 
-export { cidadeEstadoOrdenado, criarOptionElement, limparForm };
+export { cidadeEstadoOrdenado, criarOptionElement, limparForm, optionUndefined };
