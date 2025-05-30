@@ -1,20 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cachorro</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <!--Google Fontes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!--Google Fontes/fim-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cachorro</title>
+</head>
+
+<body>
+  <div class="container">
     <div class="dogs"></div>
+
     <div class="select-dog">
-      <label for="dog">Cachorro:</label>
-      <select id="dog">
-        <option value="">Selecione o cachorro</option>
-      </select>
-      <button id="btn-dog">Ver animal</button>
+      <h1>🐾 Escolha seu animal favorito</h1>
+      <p class="subtitle">Descubra curiosidades e veja imagens incríveis.</p>
+
+      <label for="dog">Selecione uma opção:</label>
+      <div class="input-group">
+        <select id="dog">
+          <option value="" disabled selected>Selecionar</option>
+          <option value="DOG">Cachorro</option>
+          <option value="CAT">Gato</option>
+        </select>
+        <button id="btn-dog">Ver</button>
+      </div>
     </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
