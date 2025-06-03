@@ -31,6 +31,11 @@
     display: flex;
     cursor: pointer;
     margin-bottom: 10px;
+    transition: all .2s ease-in-out;
     padding: 17px 206px 17px 24px;
-    border: 1px solid black;
+    border: 1px solid transparent;
+}
+
+.qrcode {
+    margin-right: 50px;
 }

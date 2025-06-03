@@ -5,25 +5,47 @@
             "nome": "Thiago Hens Suchi",
             "foto_URL": "./public/image/Thiago.png",
             "background": {
-                "tipo": "imagem",
-                "valor": "./public/image/background1.png"
+                "tipo": "linear",
+                "valor": "repeating-linear-gradient(to bottom, #1d1d1d, #242424 2px, #111111 2px, #111111 4px)",
+                "keyframes": "@keyframes moveLines { from { background-position: 0 0; } to { background-position: 0 100px; } }",
+                "animation": "moveLines 6s linear infinite"
             },
             "link": {
                 "cor": "#3498db",
-                "hover": "#2980b9",
+                "hover": "transparent",
                 "texto": "#ffffff"
             },
-            "border_radius": "10px",
+            "border_radius": "5px",
             "links": [
                 {
-                    "icone": "./public/icons/GitHub.png",
+                    "icone": "./public/icons/github.svg",
                     "texto": "GitHub",
                     "url": "https://GitHub.com/ThiagoSuchi"
                 },
                 {
-                    "icone": "./public/icons/Linkedin .png",
+                    "icone": "./public/icons/linkedin.svg",
                     "texto": "Linkedin",
                     "url": "https://Linkedin.com/ThiagoHS"
+                },
+                {
+                    "icone": "./public/icons/instagram.svg",
+                    "texto": "Instagram",
+                    "url": "https://www.instagram.com/thiago_hsuchi/"
+                },
+                {
+                    "icone": "./public/icons/gitlab.svg",
+                    "texto": "GitLab",
+                    "url": "https://gitlab.fslab.dev/ThiagoSuchi"
+                },
+                {
+                    "icone": "./public/icons/email.svg",
+                    "texto": "E-mail",
+                    "url": "https://thiagohenssuchi@gmail.com"
+                },
+                {
+                    "icone": "./public/icons/youtube.svg",
+                    "texto": "YouTube",
+                    "url": "https://youtube.com/thiago2233"
                 }
             ]
         },
@@ -32,25 +54,47 @@
             "nome": "Joaquim Almeida",
             "foto_URL": "./public/image/Joaquim.png",
             "background": {
-                "tipo": "gradiente",
-                "valor": "linear-gradient(to right, #ff7e5f, #feb47b)"
+                "tipo": "linear",
+                "valor": "linear-gradient(to right, #ff7e5f, #feb47b)",
+                "keyframes": "@keyframes fadeJoaquim { 0% { opacity: 0.8; } 100% { opacity: 1; } }",
+                "animation": "fadeJoaquim 10s ease-in-out infinite"
             },
             "link": {
                 "cor": "#e74c3c",
                 "hover": "#c0392b",
                 "texto": "#ffffff"
             },
-            "border_radius": "15px",
+            "border_radius": "5px",
             "links": [
                 {
-                    "icone": "./public/icons/linkedin.png",
+                    "icone": "./public/icons/github.svg",
+                    "texto": "GitHub",
+                    "url": "https://github.com/joaquimadalmeida"
+                },
+                {
+                    "icone": "./public/icons/linkedin.svg",
                     "texto": "LinkedIn",
                     "url": "https://linkedin.com/in/joaquimadalmeida"
                 },
                 {
-                    "icone": "./public/icons/github.png",
-                    "texto": "GitHub",
-                    "url": "https://github.com/joaquimadalmeida"
+                    "icone": "./public/icons/instagram.svg",
+                    "texto": "Instagram",
+                    "url": "https://instagram.com/joaquimdev"
+                },
+                {
+                    "icone": "./public/icons/gitlab.svg",
+                    "texto": "GitLab",
+                    "url": "https://gitlab.com/joaquimdev"
+                },
+                {
+                    "icone": "./public/icons/email.svg",
+                    "texto": "E-mail",
+                    "url": "mailto:joaquim.almeida@email.com"
+                },
+                {
+                    "icone": "./public/icons/youtube.svg",
+                    "texto": "YouTube",
+                    "url": "https://youtube.com/@joaquimAlmeida"
                 }
             ]
         },
@@ -60,24 +104,46 @@
             "foto_URL": "./public/image/Bernardo.png",
             "background": {
                 "tipo": "imagem",
-                "valor": "./public/image/background1.png"
+                "valor": "./public/image/background1.png",
+                "keyframes": "@keyframes pulseBernardo { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }",
+                "animation": "pulseBernardo 8s ease-in-out infinite"
             },
             "link": {
                 "cor": "#1abc9c",
                 "hover": "#16a085",
                 "texto": "#000000"
             },
-            "border_radius": "10px",
+            "border_radius": "5px",
             "links": [
                 {
-                    "icone": "./public/icons/GitHub.png",
+                    "icone": "./public/icons/github.svg",
                     "texto": "GitHub",
-                    "url": "https://GitHub.com/Bernardin"
+                    "url": "https://github.com/bernardocosta"
                 },
                 {
-                    "icone": "./public/icons/Linkedin .png",
-                    "texto": "Linkedin",
-                    "url": "https://Linkedin.com/BErdin"
+                    "icone": "./public/icons/linkedin.svg",
+                    "texto": "LinkedIn",
+                    "url": "https://linkedin.com/in/bernardocosta"
+                },
+                {
+                    "icone": "./public/icons/instagram.svg",
+                    "texto": "Instagram",
+                    "url": "https://instagram.com/bernardo.costa"
+                },
+                {
+                    "icone": "./public/icons/gitlab.svg",
+                    "texto": "GitLab",
+                    "url": "https://gitlab.com/bernardoc"
+                },
+                {
+                    "icone": "./public/icons/email.svg",
+                    "texto": "E-mail",
+                    "url": "mailto:bernardo.costa@email.com"
+                },
+                {
+                    "icone": "./public/icons/youtube.svg",
+                    "texto": "YouTube",
+                    "url": "https://youtube.com/@bernardoc"
                 }
             ]
         },
@@ -86,25 +152,47 @@
             "nome": "Emilia Santos",
             "foto_URL": "./public/image/Emilia.png",
             "background": {
-                "tipo": "gradiente",
-                "valor": "linear-gradient(to right, #ff9a9e, #fad0c4)"
+                "tipo": "linear",
+                "valor": "linear-gradient(to right, #ff9a9e, #fad0c4)",
+                "keyframes": "@keyframes glowEmilia { 0% { filter: brightness(1); } 50% { filter: brightness(1.1); } 100% { filter: brightness(1); } }",
+                "animation": "glowEmilia 5s ease-in-out infinite"
             },
             "link": {
                 "cor": "#8e44ad",
                 "hover": "#732d91",
                 "texto": "#ffffff"
             },
-            "border_radius": "12px",
+            "border_radius": "5px",
             "links": [
                 {
-                    "icone": "./public/icons/Instagram.png",
+                    "icone": "./public/icons/github.svg",
+                    "texto": "GitHub",
+                    "url": "https://github.com/emiliasantos"
+                },
+                {
+                    "icone": "./public/icons/linkedin.svg",
+                    "texto": "LinkedIn",
+                    "url": "https://linkedin.com/in/emiliasantos"
+                },
+                {
+                    "icone": "./public/icons/instagram.svg",
                     "texto": "Instagram",
                     "url": "https://instagram.com/emiliasantos12"
                 },
                 {
-                    "icone": "./public/icons/Twitter.png",
-                    "texto": "Twitter",
-                    "url": "https://twitter.com/emiliaawdsantos"
+                    "icone": "./public/icons/gitlab.svg",
+                    "texto": "GitLab",
+                    "url": "https://gitlab.com/emiliaawdsantos"
+                },
+                {
+                    "icone": "./public/icons/email.svg",
+                    "texto": "E-mail",
+                    "url": "mailto:emilia.santos@email.com"
+                },
+                {
+                    "icone": "./public/icons/youtube.svg",
+                    "texto": "YouTube",
+                    "url": "https://youtube.com/@emiliaawdsantos"
                 }
             ]
         },
@@ -114,24 +202,95 @@
             "foto_URL": "./public/image/Ana.png",
             "background": {
                 "tipo": "imagem",
-                "valor": "./public/image/background2.png"
+                "valor": "./public/image/background2.png",
+                "keyframes": "@keyframes zoomAna { 0% { background-size: 100%; } 100% { background-size: 105%; } }",
+                "animation": "zoomAna 20s linear infinite"
             },
             "link": {
                 "cor": "#e67e22",
                 "hover": "#d35400",
-                "texto": "#ffffff"
+                "texto": "black"
             },
-            "border_radius": "8px",
+            "border_radius": "5px",
             "links": [
                 {
-                    "icone": "./public/icons/Facebook.png",
-                    "texto": "Facebook",
-                    "url": "https://facebook.com/anajulia3489"
+                    "icone": "./public/icons/github.svg",
+                    "texto": "GitHub",
+                    "url": "https://github.com/anajulia3489"
                 },
                 {
-                    "icone": "./public/icons/YouTube.png",
+                    "icone": "./public/icons/linkedin.svg",
+                    "texto": "LinkedIn",
+                    "url": "https://linkedin.com/in/anajulia3489"
+                },
+                {
+                    "icone": "./public/icons/instagram.svg",
+                    "texto": "Instagram",
+                    "url": "https://instagram.com/anajulia.codes"
+                },
+                {
+                    "icone": "./public/icons/gitlab.svg",
+                    "texto": "GitLab",
+                    "url": "https://gitlab.com/anajulia"
+                },
+                {
+                    "icone": "./public/icons/email.svg",
+                    "texto": "E-mail",
+                    "url": "mailto:anajulia@email.com"
+                },
+                {
+                    "icone": "./public/icons/youtube.svg",
                     "texto": "YouTube",
-                    "url": "https://youtube.com/ana9090ulia"
+                    "url": "https://youtube.com/@anajuliaoficial"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "nome": "Marcela Oliveira",
+            "foto_URL": "./public/image/Marcela.png",
+            "background": {
+                "tipo": "linear",
+                "valor": "linear-gradient(to right, #43cea2, #185a9d)",
+                "keyframes": "@keyframes slideMarcela { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }",
+                "animation": "slideMarcela 15s linear infinite"
+            },
+            "link": {
+                "cor": "#f39c12",
+                "hover": "#e67e22",
+                "texto": "#ffffff"
+            },
+            "border_radius": "5px",
+            "links": [
+                {
+                    "icone": "./public/icons/github.svg",
+                    "texto": "GitHub",
+                    "url": "https://github.com/marcelaoliveira"
+                },
+                {
+                    "icone": "./public/icons/linkedin.svg",
+                    "texto": "LinkedIn",
+                    "url": "https://linkedin.com/in/marcelaiioliveira"
+                },
+                {
+                    "icone": "./public/icons/instagram.svg",
+                    "texto": "Instagram",
+                    "url": "https://instagram.com/marcelaiioliveira"
+                },
+                {
+                    "icone": "./public/icons/gitlab.svg",
+                    "texto": "GitLab",
+                    "url": "https://gitlab.com/marcelaoliveira"
+                },
+                {
+                    "icone": "./public/icons/email.svg",
+                    "texto": "E-mail",
+                    "url": "mailto:marcela.oliveira@email.com"
+                },
+                {
+                    "icone": "./public/icons/youtube.svg",
+                    "texto": "YouTube",
+                    "url": "https://youtube.com/@marcelaoliveira"
                 }
             ]
         }
