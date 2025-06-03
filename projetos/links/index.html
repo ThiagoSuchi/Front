@@ -3,11 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!--Google Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--Google Fontes/fim-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Link</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <div id="app">
+      <div class="person">
+        <img src="" alt="">
+        <h2 class="name"></h2>
+      </div><!--image-->
+
+      <div class="links">
+        <ul>
+          <li><img src="" alt=""></li>
+          <li><img src="" alt=""></li>
+          <li><img src="" alt=""></li>
+          <li><img src="" alt=""></li>
+          <li><img src="" alt=""></li>
+          <li><img src="" alt=""></li>
+          <li><img src="" alt=""></li>
+        </ul>
+      </div><!--links-->
+
+      <div class="qrcode">
+        <img src="./public/icons/qr-code.svg" alt="QR_CODE">
+      </div><!--qrcode-->
+    </div><!--app-->
+    <script type="module" src="./src/main.ts"></script>
   </body>
 </html>

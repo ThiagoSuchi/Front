@@ -1,1 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
 
+#app {
+    margin: 80px;
+    gap: 36px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.person {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person img{
+    width: 96px;
+}
+
+.links li{
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 17px 206px 17px 24px;
+    border: 1px solid black;
+}
