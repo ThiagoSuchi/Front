@@ -1,0 +1,139 @@
+{
+    "usuarios": [
+        {
+            "id": "1",
+            "nome": "Thiago Hens Suchi",
+            "foto_URL": "./public/image/Thiago.png",
+            "background": {
+                "tipo": "imagem",
+                "valor": "./public/image/background1.png"
+            },
+            "link": {
+                "cor": "#3498db",
+                "hover": "#2980b9",
+                "texto": "#ffffff"
+            },
+            "border_radius": "10px",
+            "links": [
+                {
+                    "icone": "./public/icons/GitHub.png",
+                    "texto": "GitHub",
+                    "url": "https://GitHub.com/ThiagoSuchi"
+                },
+                {
+                    "icone": "./public/icons/Linkedin .png",
+                    "texto": "Linkedin",
+                    "url": "https://Linkedin.com/ThiagoHS"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "nome": "Joaquim Almeida",
+            "foto_URL": "./public/image/Joaquim.png",
+            "background": {
+                "tipo": "gradiente",
+                "valor": "linear-gradient(to right, #ff7e5f, #feb47b)"
+            },
+            "link": {
+                "cor": "#e74c3c",
+                "hover": "#c0392b",
+                "texto": "#ffffff"
+            },
+            "border_radius": "15px",
+            "links": [
+                {
+                    "icone": "./public/icons/linkedin.png",
+                    "texto": "LinkedIn",
+                    "url": "https://linkedin.com/in/joaquimadalmeida"
+                },
+                {
+                    "icone": "./public/icons/github.png",
+                    "texto": "GitHub",
+                    "url": "https://github.com/joaquimadalmeida"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "nome": "Bernardo Costa",
+            "foto_URL": "./public/image/Bernardo.png",
+            "background": {
+                "tipo": "imagem",
+                "valor": "./public/image/background1.png"
+            },
+            "link": {
+                "cor": "#1abc9c",
+                "hover": "#16a085",
+                "texto": "#000000"
+            },
+            "border_radius": "10px",
+            "links": [
+                {
+                    "icone": "./public/icons/GitHub.png",
+                    "texto": "GitHub",
+                    "url": "https://GitHub.com/Bernardin"
+                },
+                {
+                    "icone": "./public/icons/Linkedin .png",
+                    "texto": "Linkedin",
+                    "url": "https://Linkedin.com/BErdin"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "nome": "Emilia Santos",
+            "foto_URL": "./public/image/Emilia.png",
+            "background": {
+                "tipo": "gradiente",
+                "valor": "linear-gradient(to right, #ff9a9e, #fad0c4)"
+            },
+            "link": {
+                "cor": "#8e44ad",
+                "hover": "#732d91",
+                "texto": "#ffffff"
+            },
+            "border_radius": "12px",
+            "links": [
+                {
+                    "icone": "./public/icons/Instagram.png",
+                    "texto": "Instagram",
+                    "url": "https://instagram.com/emiliasantos12"
+                },
+                {
+                    "icone": "./public/icons/Twitter.png",
+                    "texto": "Twitter",
+                    "url": "https://twitter.com/emiliaawdsantos"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "nome": "Ana Júlia",
+            "foto_URL": "./public/image/Ana.png",
+            "background": {
+                "tipo": "imagem",
+                "valor": "./public/image/background2.png"
+            },
+            "link": {
+                "cor": "#e67e22",
+                "hover": "#d35400",
+                "texto": "#ffffff"
+            },
+            "border_radius": "8px",
+            "links": [
+                {
+                    "icone": "./public/icons/Facebook.png",
+                    "texto": "Facebook",
+                    "url": "https://facebook.com/anajulia3489"
+                },
+                {
+                    "icone": "./public/icons/YouTube.png",
+                    "texto": "YouTube",
+                    "url": "https://youtube.com/ana9090ulia"
+                }
+            ]
+        }
+    ]
+}
