@@ -5,6 +5,18 @@
     font-family: "Inter", sans-serif;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #10535c;
+}
+
 #app {
     margin: 80px;
     gap: 36px;

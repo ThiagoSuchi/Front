@@ -25,7 +25,7 @@
                 {
                     "icone": "./public/icons/linkedin.svg",
                     "texto": "Linkedin",
-                    "url": "https://Linkedin.com/ThiagoHS"
+                    "url": "https://www.linkedin.com/in/thiago-hens-suchi-a7ba75305"
                 },
                 {
                     "icone": "./public/icons/instagram.svg",
@@ -60,8 +60,8 @@
                 "animation": "fadeJoaquim 10s ease-in-out infinite"
             },
             "link": {
-                "cor": "#e74c3c",
-                "hover": "#c0392b",
+                "cor": "#d63031",
+                "hover": "radial-gradient(circle at top left, #ff7675, #d63031)",
                 "texto": "#ffffff"
             },
             "border_radius": "5px",
@@ -104,14 +104,13 @@
             "foto_URL": "./public/image/Bernardo.png",
             "background": {
                 "tipo": "imagem",
-                "valor": "./public/image/background1.png",
-                "keyframes": "@keyframes pulseBernardo { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }",
-                "animation": "pulseBernardo 8s ease-in-out infinite"
+                "valor": "./public/image/background2.png",
+                "blur": "5px"
             },
             "link": {
                 "cor": "#1abc9c",
                 "hover": "#16a085",
-                "texto": "#000000"
+                "texto": "#10535c"
             },
             "border_radius": "5px",
             "links": [
@@ -159,7 +158,7 @@
             },
             "link": {
                 "cor": "#8e44ad",
-                "hover": "#732d91",
+                "hover": "linear-gradient(45deg, #9b59b6, #8e44ad)",
                 "texto": "#ffffff"
             },
             "border_radius": "5px",
@@ -202,14 +201,12 @@
             "foto_URL": "./public/image/Ana.png",
             "background": {
                 "tipo": "imagem",
-                "valor": "./public/image/background2.png",
-                "keyframes": "@keyframes zoomAna { 0% { background-size: 100%; } 100% { background-size: 105%; } }",
-                "animation": "zoomAna 20s linear infinite"
+                "valor": "./public/image/background1.png"
             },
             "link": {
-                "cor": "#e67e22",
-                "hover": "#d35400",
-                "texto": "black"
+                "cor": "#1abc9c",
+                "hover": "linear-gradient(to right, #1abc9c, #2ecc71)",
+                "texto": "#000000"
             },
             "border_radius": "5px",
             "links": [
@@ -256,8 +253,8 @@
                 "animation": "slideMarcela 15s linear infinite"
             },
             "link": {
-                "cor": "#f39c12",
-                "hover": "#e67e22",
+                "cor": "#ff6b81",
+                "hover": "linear-gradient(to bottom, #ff6b81, #ff4757)",
                 "texto": "#ffffff"
             },
             "border_radius": "5px",
