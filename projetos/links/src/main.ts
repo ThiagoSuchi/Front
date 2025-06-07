@@ -2,6 +2,7 @@ import type { UserProfile } from './models/interfacesUser';
 import { createLinktree, styleLinks } from './services/criarLinktree';
 import './style.css';
 
+// Conectando com o window
 const params = new URLSearchParams(window.location.search);
 
 const id = params.get("id");
