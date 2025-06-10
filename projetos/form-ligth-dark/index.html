@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Google fontes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <!--Google fontes/Fim-->
+  <title>Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="hero-back">
+      <div class="hero">
+        <h1>Inscrição nos cursos FIC</h1>
+        <button><img src="./public/icon/moon-star.png" alt=""></button>
+      </div>
+      <p>Prazo para responder: 05/05/2025</p>
+    </div>
+
+
+    <form id="form">
+      <div class="question">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+      </div>
+
+      <div class="question">
+        <label for="email">E-mail:</label>
+        <input type="text" id="email">
+      </div>
+
+      <div class="question">
+        <label for="sexo-m">Sexo:</label>
+        <input type="radio" id="sexo-m" name="sexo" value="masculino">
+        <label for="sexo-m">Masculino</label>
+        <input type="radio" id="sexo-f" name="sexo" value="feminino">
+        <label for="sexo-f">Feminino</label>
+      </div>
+
+      <div class="question">
+        <label for="curso">Curso:</label>
+        <select name="curso" id="curso">
+          <option value="" disabled selected>HTML e CSS</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="form">Descreva o atendimento especial (opcional):</label>
+        <input type="text">
+      </div>
+
+      <div class="question">
+        <input type="checkbox">
+        <p><span>*</span> Estou de acordo com os termos de serviços</p>
+      </div>
+    </form>
+
+    <p>Os campos marcados com <span>*</span> são obrigatórios</p>
+
+    <button>Realizar inscrição</button>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
