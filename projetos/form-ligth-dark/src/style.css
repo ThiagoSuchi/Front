@@ -6,9 +6,9 @@
 
 body {
   gap: 16px;
+  margin: 20em;
   height: 100vh;
   display: flex;
-  margin: 3rem;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -18,23 +18,33 @@ body {
   width: 840px;
   padding: 25px 24px;
   margin-bottom: 1.3rem;
-  border-left: 6px solid #286BB9;
-  background-color: #F1F1F199;
-
+  
   border-top-right-radius: 8px;
+  background-color: #F1F1F199;
   border-bottom-right-radius: 8px;
+  border-left: 6px solid #286BB9;
 }
 
 .hero {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 3rem;
+  justify-content: space-between;
 }
 
 .hero button {
+  padding: 10px;
   border: none;
   cursor: pointer;
+  transition: all .1s ease-in-out;
+
   background: transparent;
+}
+
+.hero button:hover {
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
+  background: #2c62a0;
 }
 
 #form {
@@ -44,12 +54,15 @@ body {
 }
 
 .question {
+  gap: 5px;
   width: 840px;
+  display: flex;
   padding: 25px 24px;
   margin-bottom: 1.3rem;
+  flex-direction: column;
+
   background-color: #F1F1F199;
   border-left: 6px solid #286BB9;
-
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -57,7 +70,97 @@ body {
 .question input {
   width: 100%;
   height: 3rem;
-  border: 1px solid;
-  border-radius: 3px;
+  padding-left: 10px;
+  outline: none;
+
+  border-radius: 4px;
+  border: 1px solid #286BB9;
 }
 
+.question label, .qtn-curso label {
+  font-size: 17px;
+}
+
+span {
+  color: red;
+}
+
+.question-sexo {
+  gap: 8px;
+  width: 840px;
+  display: flex;
+  padding: 25px 24px;
+  margin-bottom: 1.3rem;
+  flex-direction: column;
+
+  background-color: #F1F1F199;
+  border-left: 6px solid #286BB9;
+}
+
+#sexo-f {
+  margin-left: 30px;
+}
+
+.question-sexo .sexo input {
+  width: 1rem;
+}
+
+.qtn-curso  {
+  position: relative;
+}
+
+#curso {
+  width: 100%;
+  height: 3rem;
+  padding: 10px;
+  outline: none;
+  font-size: 14px;
+  color: #535353;
+
+  border-radius: 4px;
+  background: white;
+  border: 1px solid #286BB9;
+}
+
+.question-termos {
+  gap: 8px;
+  width: 840px;
+  display: flex;
+  padding: 25px 24px;
+  margin-bottom: 1.3rem;
+
+  background-color: #F1F1F199;
+  border-left: 6px solid #286BB9;
+}
+
+.descricao textarea {
+  outline: none;
+  padding: 10px;
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid #286BB9;
+}
+
+.paragrafo {
+  margin-bottom: 32px;
+}
+
+.inscrever-se {
+  border: none;
+  color: white;
+  font-size: 14pt;
+  padding: 16px 30px;
+  transition: all .1s;
+
+  border-radius: 8px;
+  background-color: #286BB9;
+}
+
+.inscrever-se:hover {
+  cursor: pointer;
+  background-color: #27568d;
+}
+
+.inscrever-se:active {
+  background-color: #4778af;
+}
