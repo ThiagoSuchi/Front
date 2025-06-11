@@ -25,7 +25,7 @@ body {
 
 .hero-back,
 .question,
-.question-sexo,
+.question-sexo, 
 .question-termos {
   width: 100%;
   max-width: 900px;
@@ -112,6 +112,11 @@ span {
 
 .descricao textarea {
   resize: none;
+}
+
+.question-termos {
+  gap: 8px;
+  display: flex;
 }
 
 .paragrafo {
