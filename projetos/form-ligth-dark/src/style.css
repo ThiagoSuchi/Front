@@ -1,159 +1,131 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
 
 body {
-  gap: 16px;
-  margin: 20em;
-  height: 100vh;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 1.5rem;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f9f9f9;
 }
 
-.hero-back {
-  width: 840px;
-  padding: 25px 24px;
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 1.5rem;
   margin-bottom: 1.3rem;
-  
-  border-top-right-radius: 8px;
-  background-color: #F1F1F199;
-  border-bottom-right-radius: 8px;
+}
+
+.hero-back,
+.question,
+.question-sexo,
+.question-termos {
+  width: 100%;
+  max-width: 900px;
+  padding: 1.5rem;
+  margin-bottom: 1.3rem;
   border-left: 6px solid #286BB9;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #f1f1f199;
 }
 
 .hero {
   display: flex;
-  margin-bottom: 3rem;
   justify-content: space-between;
+  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 900px;
 }
 
 .hero button {
   padding: 10px;
   border: none;
-  cursor: pointer;
-  transition: all .1s ease-in-out;
-
   background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .hero button:hover {
   color: white;
-  padding: 10px;
+  background-color: #2c62a0;
   border-radius: 100px;
-  background: #2c62a0;
 }
 
 #form {
-  gap: 16px;
   display: flex;
   flex-direction: column;
-}
-
-.question {
-  gap: 5px;
-  width: 840px;
-  display: flex;
-  padding: 25px 24px;
-  margin-bottom: 1.3rem;
-  flex-direction: column;
-
-  background-color: #F1F1F199;
-  border-left: 6px solid #286BB9;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.question input {
+  gap: 1rem;
   width: 100%;
-  height: 3rem;
-  padding-left: 10px;
-  outline: none;
-
-  border-radius: 4px;
-  border: 1px solid #286BB9;
+  max-width: 900px;
 }
 
-.question label, .qtn-curso label {
-  font-size: 17px;
+.question input,
+#curso,
+.descricao textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #286BB9;
+  border-radius: 4px;
+  outline: none;
+}
+
+.question input::placeholder,
+#curso::placeholder,
+.descricao textarea::placeholder {
+  color: #535353;
 }
 
 span {
   color: red;
 }
 
-.question-sexo {
-  gap: 8px;
-  width: 840px;
-  display: flex;
-  padding: 25px 24px;
-  margin-bottom: 1.3rem;
-  flex-direction: column;
-
-  background-color: #F1F1F199;
-  border-left: 6px solid #286BB9;
-}
-
-#sexo-f {
-  margin-left: 30px;
+.question label,
+.qtn-curso label {
+  font-size: 1rem;
 }
 
 .question-sexo .sexo input {
   width: 1rem;
 }
 
-.qtn-curso  {
+#sexo-f {
+  margin-left: 1.5rem;
+}
+
+.qtn-curso {
   position: relative;
 }
 
 #curso {
-  width: 100%;
-  height: 3rem;
-  padding: 10px;
-  outline: none;
-  font-size: 14px;
   color: #535353;
-
-  border-radius: 4px;
   background: white;
-  border: 1px solid #286BB9;
-}
-
-.question-termos {
-  gap: 8px;
-  width: 840px;
-  display: flex;
-  padding: 25px 24px;
-  margin-bottom: 1.3rem;
-
-  background-color: #F1F1F199;
-  border-left: 6px solid #286BB9;
 }
 
 .descricao textarea {
-  outline: none;
-  padding: 10px;
   resize: none;
-  border-radius: 4px;
-  border: 1px solid #286BB9;
 }
 
 .paragrafo {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .inscrever-se {
   border: none;
   color: white;
-  font-size: 14pt;
-  padding: 16px 30px;
-  transition: all .1s;
-
+  font-size: 1rem;
+  padding: 1rem 2rem;
   border-radius: 8px;
   background-color: #286BB9;
+  transition: background-color 0.2s;
 }
 
 .inscrever-se:hover {
