@@ -33,12 +33,12 @@
     <form id="form">
       <div class="question">
         <label for="nome"><span>*</span> Nome:</label>
-        <input type="text" id="nome">
+        <input name="nome" type="text" id="nome">
       </div>
 
       <div class="question">
         <label for="email"><span>*</span> E-mail:</label>
-        <input type="text" id="email">
+        <input name="email" type="text" id="email">
       </div>
 
       <div class="question question-sexo">
@@ -55,28 +55,28 @@
         <label for="curso"><span>*</span> Curso:</label>
         <select name="curso" id="curso">
           <option value="" disabled selected>Selecione o curso</option>
-          <option value="">HTML e CSS</option>
-          <option value="">API RESTful do zero ao avançado com JavaScript e NodeJs</option>
-          <option value="">Curso básico sobre Docker</option>
-          <option value="">Devops e Cloud</option>
-          <option value="">Java do zero ao avançado</option>
+          <option value="HTML e CSS">HTML e CSS</option>
+          <option value="API RESTful do zero ao avançado com JavaScript e NodeJs">API RESTful do zero ao avançado com JavaScript e NodeJs</option>
+          <option value="Curso básico sobre Docker">Curso básico sobre Docker</option>
+          <option value="Devops e Cloud">Devops e Cloud</option>
+          <option value="Java do zero ao avançado">Java do zero ao avançado</option>
         </select>
       </div>
 
       <div class="question descricao">
-        <label for="form">Descreva o atendimento especial (opcional):</label>
-        <textarea name="mensagem" rows="5" id="form"></textarea>
+        <label for="mensagem">Descreva o atendimento especial (opcional):</label>
+        <textarea name="mensagem" rows="5" id="mensagem"></textarea>
       </div>
 
       <div class="question-termos">
-        <input type="checkbox">
+        <input name="termos" type="checkbox">
         <p><span>*</span> Estou de acordo com os termos de serviços</p>
       </div>
+      
+      <p class="paragrafo">Os campos marcados com <span>*</span> são obrigatórios</p>
+
+      <button class="inscrever-se">Realizar inscrição</button>
     </form>
-
-    <p class="paragrafo">Os campos marcados com <span>*</span> são obrigatórios</p>
-
-    <button class="inscrever-se">Realizar inscrição</button>
   </div>
 
   <script type="module" src="/src/main.ts"></script>
