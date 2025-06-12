@@ -23,7 +23,16 @@ body {
   margin-bottom: 1.3rem;
 }
 
-.hero-back,
+.hero-back {
+  width: 100%;
+  max-width: 900px;
+  padding: 1.5rem;
+  margin-bottom: 1.3rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #e9e9e999;
+}
+
 .question,
 .question-sexo, 
 .question-termos {
@@ -34,7 +43,7 @@ body {
   border-left: 6px solid #286BB9;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  background-color: #f1f1f199;
+  background-color: #e9e9e999;
 }
 
 .hero {
@@ -140,4 +149,24 @@ span {
 
 .inscrever-se:active {
   background-color: #4778af;
+}
+
+/*----Tema dark----*/
+
+body.dark {
+  background-color: #1E1E1E;
+  color: white;
+}
+
+body.dark .hero-back, 
+#form.dark div {
+  color: white;
+  background-color: #373636;
+}
+
+#form.dark div input,
+#form.dark div select, 
+#form.dark div textarea {
+  color: white;
+  background-color: #1E1E1E;
 }
