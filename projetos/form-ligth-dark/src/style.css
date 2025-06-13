@@ -128,7 +128,13 @@ span {
   display: flex;
 }
 
-.paragrafo {
+.question-termos h4 {
+  font-weight: 400;
+}
+
+.termos {
+  font-size: 14pt;
+  font-weight: 400;
   margin-bottom: 2rem;
 }
 

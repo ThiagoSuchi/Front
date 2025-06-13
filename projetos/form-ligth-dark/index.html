@@ -53,7 +53,7 @@
 
       <div class="question qtn-curso">
         <label for="curso"><span>*</span> Curso:</label>
-        <select name="curso" id="curso">
+        <select name="curso" id="curso" required>
           <option value="" disabled selected>Selecione o curso</option>
           <option value="HTML e CSS">HTML e CSS</option>
           <option value="API RESTful do zero ao avançado com JavaScript e NodeJs">API RESTful do zero ao avançado com JavaScript e NodeJs</option>
@@ -69,11 +69,11 @@
       </div>
 
       <div class="question-termos">
-        <input name="termos" type="checkbox">
-        <p><span>*</span> Estou de acordo com os termos de serviços</p>
+        <input id="termos" name="termos" type="checkbox">
+        <h4><span>*</span> Estou de acordo com os termos de serviços</h4>
       </div>
       
-      <p class="paragrafo">Os campos marcados com <span>*</span> são obrigatórios</p>
+      <h4 class="termos">Os campos marcados com <span>*</span> são obrigatórios</h4>
 
       <button class="inscrever-se">Realizar inscrição</button>
     </form>
