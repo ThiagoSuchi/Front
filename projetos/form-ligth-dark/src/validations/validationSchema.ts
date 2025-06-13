@@ -15,5 +15,5 @@ export const formSchema = z.object({
     
     termos: z.literal(true, {
         errorMap: () => ({ message: "Você deve aceitar os termos de serviço." })
-    })
+    }) // CORRIGIR: problemas com a validação
 })

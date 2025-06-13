@@ -1,16 +1,3 @@
 {
-  "usuarios": [
-    {
-      "id": "3059",
-      "nome": "Thiago Hens Suchi",
-      "email": "sirleihens@hotmail.com",
-      "mensagem": ""
-    },
-    {
-      "id": "3fc7",
-      "nome": "Thiago Hens Suchi",
-      "email": "sirleihens@hotmail.com",
-      "mensagem": ""
-    }
-  ]
+  "usuarios": []
 }
