@@ -1,8 +1,38 @@
 import './style.css'
+import { formSchema } from './validations/validationSchema';
 
 const btnDark = document.querySelector(".btn-dark") as HTMLButtonElement;
+const divCampos = document.querySelector('.question') as HTMLDivElement
 const form = document.querySelector("#form") as HTMLFormElement;
 const body = document.body;
+
+function camposValidacao(dados: object) {
+    let dadosValidados = formSchema.safeParse(dados);
+    let validCamp = true
+
+    const inputs = form.querySelectorAll('input');
+
+    
+    inputs.forEach(input => {
+        if (input.id === "email" && !dadosValidados.success) {
+            const erroExist = divCampos.querySelector('p')
+
+            if (erroExist) {
+                divCampos.removeChild(erroExist)// Limpando erro anterior
+            }
+            
+            const p = document.createElement('p');
+            p.innerHTML = dadosValidados.error.errors.map(error => error.message).join('<br>');
+            p.style.color = "red"
+
+            divCampos.appendChild(p);
+            validCamp = false
+        }
+    })
+    
+
+    return validCamp;
+}
 
 // Capiturando os dados do formulário, e criando um usuário na api
 form.addEventListener('submit', async (e) => {
@@ -14,6 +44,10 @@ form.addEventListener('submit', async (e) => {
     // Object.formEntries() - transforma esses pares chave-valor em um objeto normal
     // dadosFormulario.entries() - coleta os pares chave-valor dos campos do formulário
     const dados = Object.fromEntries(dadosFormulario.entries());
+
+    const valid = camposValidacao(dados);
+
+    if (!valid) return
 
     const res = await fetch('http://localhost:3000/usuarios', {
         method: 'POST',
