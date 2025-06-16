@@ -11,21 +11,23 @@ export function camposValidacao(dados: object, form: HTMLFormElement) {
             const divCampos = input.parentElement as HTMLDivElement; // aponta para o pai do elemento input
             const erroExist = divCampos.querySelector('p');// Selecionei todos os paragráfos da div
 
+            // Limpando erro anterior: 
+            // evita repetições de erros, pois a cada submetida do form, mesmo já havendo um erro, era criado outro logo em baixo baixo
             if (erroExist) {
-                divCampos.removeChild(erroExist);// Limpando erro anterior
+                divCampos.removeChild(erroExist);
             }
-            
-            const p = document.createElement('p');
-            p.innerHTML =
-                dadosValidados.error.errors
-                    .filter(err => err.path[0] === input.id)// Filtra o campo que esta gerando o erro 
-                    .map(err => err.message)
-                    .join('<br>');
 
-            p.style.color = "red";
+            const p = document.createElement('p');
+            
+            // Filtra qual erro deve aparecer, se o erro existir
+            const mesageErro = dadosValidados.error.errors.find(err => err.path[0] === input.name);
+            if (mesageErro) {
+                p.innerHTML = mesageErro.message;
+                p.style.color = "red";
+            }
 
             divCampos.appendChild(p);
-            validCamp = false;
+            validCamp = false;            
         }
     });
 

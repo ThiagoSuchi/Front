@@ -2,6 +2,7 @@ import './style.css'
 
 import { camposValidacao } from './service/camposValidadcao';
 import { darkMode } from './service/darkMode';
+import { limparForm } from './service/limparForm';
 
 const btnDark = document.querySelector(".btn-dark") as HTMLButtonElement;
 const form = document.querySelector("#form") as HTMLFormElement;
@@ -13,8 +14,8 @@ form.addEventListener('submit', async (e) => {
     // Recebe todos os dados do fromulário e tranforma em um objeto
     const dadosFormulario = new FormData(form);
 
-    // Object.formEntries() - transforma esses pares chave-valor em um objeto normal
     // dadosFormulario.entries() - coleta os pares chave-valor dos campos do formulário
+    // Object.formEntries() - transforma esses pares chave-valor em um objeto normal
     const dados = Object.fromEntries(dadosFormulario.entries());
 
     const valid = camposValidacao(dados, form);
@@ -31,7 +32,8 @@ form.addEventListener('submit', async (e) => {
 
     if (res.ok) {
         alert('usuário salvo com sucesso');
-        form.reset();
+        let erroExist = form.querySelectorAll('p');
+        limparForm(form, erroExist);
         return;
     }
 
