@@ -3,6 +3,7 @@ import './style.css'
 import { camposValidacao } from './service/camposValidadcao';
 import { darkMode } from './service/darkMode';
 import { limparForm } from './service/limparForm';
+import { responseGet, responsePost } from './routes/usuarios.routes';
 
 const btnDark = document.querySelector(".btn-dark") as HTMLButtonElement;
 const form = document.querySelector("#form") as HTMLFormElement;
@@ -22,13 +23,7 @@ form.addEventListener('submit', async (e) => {
 
     if (!valid) return;
 
-    const res = await fetch('http://localhost:3000/usuarios', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'// Diz ao servidor que irei enviar JSON
-        },
-        body: JSON.stringify(dados)// Converte em uma string json
-    });
+    const res = await responsePost(dados); // retorna um promise response
 
     if (res.ok) {
         alert('usuário salvo com sucesso');
@@ -44,3 +39,5 @@ form.addEventListener('submit', async (e) => {
 btnDark.addEventListener('click', () => {
     darkMode(form, btnDark);
 });
+
+responseGet()
