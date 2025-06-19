@@ -206,6 +206,7 @@ body.dark .hero-back,
   color: white;
   font-size: 14pt;
   padding: 8px 7px;
+  cursor: pointer;
 }
 
 .sidebar:hover {
