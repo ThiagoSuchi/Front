@@ -10,6 +10,55 @@ body {
   background-color: #f9f9f9;
 }
 
+/*----- ABA MENU -----*/
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 100vh;
+  background: #29588d;
+  z-index: 1000;
+}
+
+.menu div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.menu h1 {
+  padding: 30px 20px 10px;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 16pt;
+  font-weight: 600;
+}
+
+.sidebar {
+  text-align: left;
+  background: transparent; 
+  width: 100%;
+  border: none;
+  color: white;
+  font-size: 14pt;
+  padding: 8px 7px;
+  cursor: pointer;
+}
+
+.sidebar:hover {
+  background: rgba(160, 160, 160, 0.267);
+  border-radius: 10px;
+}
+
+.sidebar:focus {
+  background: rgba(160, 160, 160, 0.164);
+  border-radius: 10px;
+}
+
+
+/*----- Formulário -----*/
 .formulario {
   width: 100%;
   max-width: 900px;
@@ -152,8 +201,8 @@ span {
   background-color: #4778af;
 }
 
-/*----Tema dark----*/
 
+/*----Tema dark----*/
 body.dark {
   background-color: #1E1E1E;
   color: white;
@@ -172,49 +221,14 @@ body.dark .hero-back,
   background-color: #1E1E1E;
 }
 
-/*-----ABA MENU-----*/
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 270px;
-  height: 100vh;
-  background: #29588d;
-  z-index: 1000;
-}
 
-.menu div {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
-}
-
-.menu h1 {
-  padding: 30px 20px 10px;
-  margin-bottom: 10px;
-  color: rgb(255, 255, 255);
-  font-size: 16pt;
-  font-weight: 600;
-}
-
-.sidebar {
-  text-align: left;
-  background: transparent; 
+/*----- Lista de Cadastrados -----*/
+.lista {
+  display: none;
   width: 100%;
-  border: none;
-  color: white;
-  font-size: 14pt;
-  padding: 8px 7px;
-  cursor: pointer;
+  max-width: 900px;
+  padding: 1.5rem;
+  margin-left: 31%;
 }
 
-.sidebar:hover {
-  background: rgba(160, 160, 160, 0.267);
-  border-radius: 10px;
-}
 
-.sidebar:focus {
-  background: rgba(160, 160, 160, 0.164);
-  border-radius: 10px;
-}

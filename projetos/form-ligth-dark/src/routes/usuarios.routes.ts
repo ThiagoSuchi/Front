@@ -9,12 +9,15 @@ async function responsePost(dados: object): Promise<Response> {
 }
 
 async function responseGet() {
-    await fetch('http://localhost:3000/usuarios')
-        .then(res => res.json())
-        .then(users => {
-            console.log("Usuários >> " + JSON.stringify(users, null, 2));  
-        })
-        .catch(err => console.log("Erro ao buscar usuários", err));
+    try {
+        const res= fetch('http://localhost:3000/usuarios')
+        const users = (await res).json();
+
+        return users
+    } catch (err) {
+        console.log("Erro ao buscar usuários: ", err);
+        return 'Nenhum usuário registrado'
+    }
 }
 
 
