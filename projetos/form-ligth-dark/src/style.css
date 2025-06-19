@@ -53,6 +53,7 @@ body {
 }
 
 .sidebar:focus {
+  outline: none;
   background: rgba(160, 160, 160, 0.164);
   border-radius: 10px;
 }

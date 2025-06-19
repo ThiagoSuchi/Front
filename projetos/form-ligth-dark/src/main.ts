@@ -66,4 +66,10 @@ async function sidebarButtons(): Promise<void> {
     })
 }
 
+// Lógica simples para manter por padrão o estilo aplicado ao sidebar:focus
+window.addEventListener('DOMContentLoaded', () => {
+    const btnForm = document.querySelector('.btn-form') as HTMLButtonElement;
+    btnForm.focus();
+});
+
 sidebarButtons()
