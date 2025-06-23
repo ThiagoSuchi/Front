@@ -227,6 +227,13 @@ span {
   padding-left: 5rem;
 }
 
+.sem-user {
+  margin: 10rem 15rem;
+  color: #707070;
+  font-size: 20pt;
+  font-weight: 400;
+}
+
 .card h3 {
   margin-top: 0;
   color: #286BB9;

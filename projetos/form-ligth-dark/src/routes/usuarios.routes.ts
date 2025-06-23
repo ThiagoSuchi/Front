@@ -16,7 +16,6 @@ async function responseGet() {
         return users
     } catch (err) {
         console.log("Erro ao buscar usuários: ", err);
-        return 'Nenhum usuário registrado'
     }
 }
 

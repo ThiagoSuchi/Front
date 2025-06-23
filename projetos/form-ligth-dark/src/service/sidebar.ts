@@ -27,6 +27,16 @@ export async function sidebarButtons(): Promise<void> {
 
         const usuarios = await responseGet()
 
+        console.log(usuarios);
+        
+
+        if (usuarios.length === 0) {
+            lista.innerHTML = `
+                <h1 class="sem-user">Nenhum usuário cadastrado.</h1>
+            `
+            return
+        }
+
         lista.innerHTML = usuarios.map((user: any) => `
             <div class="card">
                 <h3>${user.nome}</h3>
