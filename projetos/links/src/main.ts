@@ -7,7 +7,7 @@ const params = new URLSearchParams(window.location.search);
 
 const id = params.get("id");
 
-fetch(`http://localhost:3000/usuarios?id=${id}`)
+fetch(`http://localhost:3080/usuarios?id=${id}`)
   .then(res => res.json())
   .then(data => {
     // Percorri todos os usuários e apliquei suas respectivas estilizações
