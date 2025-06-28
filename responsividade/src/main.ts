@@ -1,14 +1,9 @@
 import './style.css'
 
 const hamburg = document.querySelector('.hamburg') as HTMLDivElement;
-const lista = document.querySelector('.lista') as HTMLLIElement;
+const sidebar = document.querySelector('.sidebar') as HTMLUListElement;
 
 hamburg.addEventListener('click', () => {
   hamburg.classList.toggle('show');
-
-  if (hamburg.classList.contains('show')) {
-    hamburg.style.background = 'black'
-  } else {
-    hamburg.style.background = 'transparent'
-  }
+  sidebar.classList.toggle('show');
 })
