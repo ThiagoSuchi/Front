@@ -1,3 +1,22 @@
 {
-  "usuarios": []
+  "usuarios": [
+    {
+      "id": "ead2",
+      "nome": "Thiago Hens Suchi",
+      "email": "thiagohenssuchi@gmail.com",
+      "sexo": "masculino",
+      "curso": "HTML e CSS",
+      "mensagem": "Opaaa, registrado!",
+      "termos": "on"
+    },
+    {
+      "id": "6857",
+      "nome": "Betina",
+      "email": "betina@gmail.com",
+      "sexo": "feminino",
+      "curso": "Curso básico sobre Docker",
+      "mensagem": "",
+      "termos": "on"
+    }
+  ]
 }

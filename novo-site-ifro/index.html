@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instituto Federal de Rondônia - IFRO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+
+<body>
+  <div id="aplicacao">
+    <!-- Cabeçalho Gov.br com efeitos modernos -->
+    <header class="cabecalho-governo fade-in">
+      <div class="container-governo">
+        <div class="logo-governo">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCA0MCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDRINDhWMjBIMTBWNFoiIGZpbGw9IndoaXRlIiBzdHJva2U9IiNmZmYiLz4KPC9zdmc+"
+            alt="Gov.br">
+          <span>gov.br</span>
+        </div>
+        <nav class="navegacao-governo">
+          <a href="#">COMUNICA BR</a>
+          <a href="#">ACESSO À INFORMAÇÃO</a>
+          <a href="#">PARTICIPE</a>
+          <a href="#">LEGISLAÇÃO</a>
+          <a href="#">ÓRGÃOS DO GOVERNO</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Barra de Navegação com efeitos -->
+    <nav class="navegacao-principal slide-in-left">
+      <div class="container-navegacao">
+        <div class="navegacao-esquerda">
+          <button class="botao-menu">☰ Ir para o conteúdo</button>
+          <button class="botao-menu">☰ Ir para o menu</button>
+          <button class="botao-menu">🔍 Ir para a busca</button>
+          <button class="botao-menu">📄 Ir para o rodapé</button>
+        </div>
+        <div class="navegacao-direita">
+          <div class="ferramentas-acessibilidade">
+            <button>ACESSIBILIDADE</button>
+            <button>ALTO CONTRASTE</button>
+            <button>MAPA DO SITE</button>
+            <button>ENTRAR/SAIR</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Cabeçalho Principal -->
+    <header class="cabecalho-principal">
+      <div class="container-cabecalho">
+        <div class="conteudo-cabecalho">
+          <div class="secao-logo">
+            <span class="rotulo-ifro">IFRO</span>
+            <h1>Instituto Federal de Rondônia</h1>
+            <p class="ministerio">MINISTÉRIO DA EDUCAÇÃO</p>
+          </div>
+          <div class="busca-social">
+            <div class="caixa-busca">
+              <input type="text" placeholder="Buscar no portal">
+              <button>🔍</button>
+            </div>
+            <div class="icones-sociais">
+              <a href="#">📘</a>
+              <a href="#">📺</a>
+              <a href="#">🐦</a>
+              <a href="#">📷</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navegação Secundária -->
+    <nav class="navegacao-secundaria">
+      <div class="container-navegacao-secundaria">
+        <a href="#">Sobre o IFRO</a>
+        <a href="#">Comunicação</a>
+        <a href="#">Ouvidoria</a>
+        <a href="#">Contato</a>
+        <a href="#">Site Antigo</a>
+        <a href="#">Fale Conosco</a>
+        <a href="#">IFRO Mobile</a>
+      </div>
+    </nav>
+
+    <!-- Abas de Acesso Rápido -->
+    <div class="acesso-rapido">
+      <div class="container-acesso">
+        <div class="aba-acesso ativa">ACESSO RÁPIDO</div>
+        <div class="aba-acesso">EAD - AVA</div>
+        <div class="aba-acesso">SELEÇÃO</div>
+        <div class="aba-acesso">PAINEL DE INDICADORES</div>
+        <div class="aba-acesso">SEI - IFRO</div>
+        <div class="aba-acesso">WIKI</div>
+        <div class="aba-acesso">BIBLIOTECA</div>
+      </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo-principal">
+      <div class="container-conteudo">
+        <!-- Barra Lateral Esquerda -->
+        <aside class="barra-lateral">
+          <div class="logo-ifro">
+            <div class="quadrados-logo">
+              <div class="quadrado vermelho"></div>
+              <div class="quadrado verde-1"></div>
+              <div class="quadrado verde-2"></div>
+              <div class="quadrado verde-3"></div>
+              <div class="quadrado verde-4"></div>
+              <div class="quadrado verde-5"></div>
+              <div class="quadrado verde-6"></div>
+              <div class="quadrado verde-7"></div>
+              <div class="quadrado verde-8"></div>
+            </div>
+            <div class="texto-logo">
+              <h2>INSTITUTO<br>FEDERAL</h2>
+              <p>Rondônia</p>
+            </div>
+          </div>
+
+          <div class="secao-pdi">
+            <div class="emblema-pdi">PDI 2023-2027</div>
+          </div>
+
+          <div class="botoes-acesso">
+            <button class="botao-acesso aluno">👤 Aluno</button>
+            <button class="botao-acesso servidor">👤 Servidor</button>
+            <button class="botao-acesso informacao">Acesso à informação</button>
+            <button class="botao-acesso transparencia">Transparência e<br>Prestação de contas</button>
+          </div>
+
+          <!-- Seções Adicionais da Barra Lateral -->
+          <div class="secao-barra-lateral">
+            <h3>Nossos Cursos</h3>
+            <div class="links-cursos">
+              <a href="#">Editais</a>
+              <a href="#">Concursos e Seleções</a>
+              <a href="#">Processos Seletivos</a>
+            </div>
+          </div>
+
+          <div class="secao-emec">
+            <div class="cartao-emec">
+              <div class="logo-emec">
+                <span>📱 e-MEC</span>
+              </div>
+              <div class="codigo-qr">
+                <div class="placeholder-qr">
+                  <div class="quadrados-qr">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+              <button class="botao-acesso-emec">ACESSE JÁ!</button>
+            </div>
+          </div>
+
+          <div class="secao-barra-lateral">
+            <div class="secao-dropdown">
+              <div class="cabecalho-dropdown">
+                <span>ACESSO À INFORMAÇÃO</span>
+                <span class="seta-dropdown">▼</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="secao-barra-lateral">
+            <h4>CAMPI</h4>
+            <div class="links-campi">
+              <a href="#">Ariquemes</a>
+              <a href="#">Buritis</a>
+              <a href="#">Cacoal</a>
+              <a href="#">Colorado do Oeste</a>
+              <a href="#">Guajará-Mirim</a>
+              <a href="#">Jaru</a>
+              <a href="#">Ji-Paraná</a>
+              <a href="#">São Miguel do Guaporé</a>
+              <a href="#">Porto Velho Zona Norte</a>
+              <a href="#">Porto Velho Calama</a>
+              <a href="#">Vilhena</a>
+            </div>
+          </div>
+
+          <div class="sidebar-section instituto-section">
+            <div class="instituto-header">
+              <h4>O INSTITUTO</h4>
+            </div>
+            <div class="instituto-links">
+              <a href="#">Apresentação</a>
+              <a href="#">Missão, Visão, Valores</a>
+              <a href="#">Organograma</a>
+              <a href="#">Reitoria</a>
+              <a href="#">Pró-Reitorias</a>
+              <a href="#">Educação a Distância</a>
+              <a href="#">Órgãos Colegiados e de Apoio</a>
+              <a href="#">Documentos Institucionais</a>
+              <a href="#">Avaliação Institucional</a>
+              <a href="#">Eleições</a>
+              <a href="#">Auditoria Interna</a>
+              <a href="#">Agenda dos Dirigentes</a>
+              <a href="#">Consulta Pública</a>
+              <a href="#">Centro de Inovação Tecnológica - CIT</a>
+              <a href="#">Rádio IFRO</a>
+            </div>
+          </div>
+
+          <div class="sidebar-section dropdown-section">
+            <div class="dropdown-header">
+              <span>TRANSPARÊNCIA E PRESTAÇÃO DE CONTAS</span>
+              <span class="dropdown-arrow">▼</span>
+            </div>
+          </div>
+
+          <div class="sidebar-section macroprojetos-sidebar">
+            <div class="macroprojetos-header">
+              <h4>MACROPROJETOS</h4>
+            </div>
+            <div class="macroprojetos-links">
+              <a href="#">Viva Saúde</a>
+              <a href="#">GeoRondônia</a>
+              <a href="#">IFRO Atleta cidadão</a>
+              <a href="#">Morar+Rural</a>
+              <a href="#">Documentos</a>
+              <a href="#">Escola de Chocolate</a>
+              <a href="#">Pesca e Sustentabilidade</a>
+              <a href="#">PCD+ Mães Atípicas</a>
+            </div>
+          </div>
+
+          <div class="sidebar-section dropdown-section">
+            <div class="dropdown-header">
+              <span>DESENVOLVIMENTO INSTITUCIONAL</span>
+              <span class="dropdown-arrow">▼</span>
+            </div>
+          </div>
+
+          <div class="sidebar-section gestao-sidebar">
+            <div class="gestao-header">
+              <h4>GESTÃO DE PESSOAS</h4>
+            </div>
+          </div>
+
+          <!-- Ensino Section -->
+          <div class="sidebar-section ensino-section">
+            <div class="ensino-header">
+              <h4>ENSINO</h4>
+            </div>
+            <div class="ensino-links">
+              <a href="#">A Pró-Reitoria</a>
+              <a href="#">Assistência Estudantil</a>
+              <a href="#">Biblioteca IFRO</a>
+              <a href="#">Cursos</a>
+              <a href="#">Programas e Bolsas</a>
+              <a href="#">Publicações do Ensino</a>
+              <a href="#">JIFRO</a>
+            </div>
+          </div>
+
+          <!-- Pesquisa Section -->
+          <div class="sidebar-section pesquisa-section">
+            <div class="pesquisa-header">
+              <h4>PESQUISA, INOVAÇÃO E PÓS-GRADUAÇÃO</h4>
+            </div>
+          </div>
+
+          <!-- Extensão Section -->
+          <div class="sidebar-section dropdown-section">
+            <div class="dropdown-header">
+              <span>EXTENSÃO</span>
+              <span class="dropdown-arrow">▼</span>
+            </div>
+          </div>
+
+          <!-- Administração Section -->
+          <div class="sidebar-section dropdown-section">
+            <div class="dropdown-header">
+              <span>ADMINISTRAÇÃO</span>
+              <span class="dropdown-arrow">▼</span>
+            </div>
+          </div>
+
+          <!-- Relações Internacionais Section -->
+          <div class="sidebar-section relacoes-section">
+            <div class="relacoes-header">
+              <h4>RELAÇÕES INTERNACIONAIS</h4>
+            </div>
+          </div>
+
+          <!-- Voltar ao Topo -->
+          <div class="voltar-topo">
+            <button class="voltar-topo-btn">⬆ Voltar para o topo</button>
+          </div>
+        </aside>
+
+        <!-- Main Section -->
+        <section class="main-section">
+          <!-- Hero Banner -->
+          <div class="hero-banner">
+            <img src="https://via.placeholder.com/800x300/4CAF50/FFFFFF?text=SEU+LUGAR+NO+IFRO" alt="Banner IFRO">
+          </div>
+
+          <!-- News Section -->
+          <div class="news-section">
+            <h2 class="news-title">Notícias</h2>
+
+            <article class="news-main">
+              <h3>Últimos dias para inscrição na pós em Gestão em EaD</h3>
+              <div class="news-content">
+                <img src="https://via.placeholder.com/200x150/2E7D32/FFFFFF?text=POS+GRADUACAO" alt="Pós-graduação">
+                <div class="news-text">
+                  <span class="news-category">EXTENSÃO</span>
+                  <h4>Mulher de Fibra/IFRO seleciona alunas para cursos gratuitos de Operadora de</h4>
+                  <p>A Pró-Reitoria de Extensão do Instituto Federal de Educação, Ciência e Tecnologia de Rondônia
+                    (Proex/IFRO) está com inscrições abertas...</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <span class="news-category">AUDINT</span>
+              <h4>Auditoria Interna de processo seletivo</h4>
+            </article>
+
+            <article class="news-item">
+              <span class="news-category audit">AUDINT</span>
+              <h4>Discente avalia governança, controles e gestão</h4>
+              <p>O Instituto Federal de Educação, Ciência e Tecnologia de Rondônia (IFRO) realizou auditoria sobre o
+                processo seletivo de discentes (cursos...</p>
+            </article>
+
+            <article class="news-item">
+              <span class="news-category international">INTERNACIONALIZAÇÃO</span>
+              <h4>IFRO seleciona estudantes para a 2ª edição do Programa de Mobilidade STEM Internacional</h4>
+              <p>O Instituto Federal de Educação, Ciência e Tecnologia de Rondônia (IFRO) abriu o processo seletivo para
+                a segunda edição do...</p>
+            </article>
+          </div>
+
+          <!-- Campi Section -->
+          <div class="campi-section">
+            <h2 class="section-title">Campi</h2>
+            <div class="campi-gallery">
+              <div class="campi-row">
+                <div class="campi-item">
+                  <img src="https://via.placeholder.com/300x200/047857/FFFFFF?text=Campus+1" alt="Campus IFRO">
+                </div>
+                <div class="campi-item">
+                  <img src="https://via.placeholder.com/300x200/059669/FFFFFF?text=Campus+2" alt="Campus IFRO">
+                </div>
+                <div class="campi-item">
+                  <img src="https://via.placeholder.com/300x200/047857/FFFFFF?text=Campus+3" alt="Campus IFRO">
+                </div>
+              </div>
+              <div class="campi-row">
+                <div class="campi-item">
+                  <img src="https://via.placeholder.com/300x200/065f46/FFFFFF?text=Campus+4" alt="Campus IFRO">
+                </div>
+                <div class="campi-item large">
+                  <img src="https://via.placeholder.com/400x300/10b981/FFFFFF?text=Seleção+de+Candidatas"
+                    alt="Seleção IFRO">
+                  <div class="campi-overlay">
+                    <div class="overlay-content">
+                      <h3>Seleção de candidatas</h3>
+                      <p>CURSO PIC ASSISTENTE EM OPERAÇÕES JUDICIÁRIAS</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="campi-item">
+                  <img src="https://via.placeholder.com/300x200/047857/FFFFFF?text=Campus+5" alt="Campus IFRO">
+                </div>
+              </div>
+              <div class="campi-row">
+                <div class="campi-item">
+                  <img src="https://via.placeholder.com/300x200/059669/FFFFFF?text=Campus+6" alt="Campus IFRO">
+                </div>
+                <div class="campi-item">
+                  <img src="https://via.placeholder.com/300x200/047857/FFFFFF?text=Campus+7" alt="Campus IFRO">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vozes do IFRO Section -->
+          <div class="vozes-section">
+            <h2 class="section-title">Vozes do IFRO</h2>
+            <div class="vozes-gallery">
+              <div class="vozes-row">
+                <div class="vozes-item">
+                  <img src="https://via.placeholder.com/280x200/8b5cf6/FFFFFF?text=Cerimônia+de+Premiação"
+                    alt="Cerimônia de Premiação">
+                </div>
+                <div class="vozes-item">
+                  <img src="https://via.placeholder.com/280x200/059669/FFFFFF?text=Laboratório+de+Pesquisa"
+                    alt="Laboratório de Pesquisa">
+                </div>
+                <div class="vozes-item">
+                  <img src="https://via.placeholder.com/280x200/047857/FFFFFF?text=Professora+IFRO"
+                    alt="Professora IFRO">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Macroprojetos Section -->
+          <div class="macroprojetos-section">
+            <h2 class="section-title">Macroprojetos</h2>
+            <div class="macroprojetos-gallery">
+              <div class="macroprojetos-row">
+                <div class="macroprojeto-item projeto-viva">
+                  <div class="projeto-logo">
+                    <div class="logo-circle">
+                      <div class="logo-content">
+                        <div class="logo-tree">🌱</div>
+                        <div class="logo-house">🏠</div>
+                        <div class="logo-heart">💚</div>
+                      </div>
+                    </div>
+                    <h3>PROJETO VIVA SAÚDE</h3>
+                  </div>
+                </div>
+                <div class="macroprojeto-item">
+                  <img src="https://via.placeholder.com/320x240/047857/FFFFFF?text=Atendimento+Médico"
+                    alt="Atendimento Médico IFRO">
+                </div>
+                <div class="macroprojeto-item selecao-bolsistas">
+                  <div class="bolsistas-content">
+                    <div class="bolsistas-header">
+                      <div class="escola-logo">
+                        <span>🍫 ESCOLA DO CHOCOLATE</span>
+                      </div>
+                      <div class="ifro-logo-small">
+                        <div class="logo-squares-small">
+                          <div class="square-small green"></div>
+                          <div class="square-small green"></div>
+                          <div class="square-small green"></div>
+                          <div class="square-small green"></div>
+                        </div>
+                        <span>INSTITUTO FEDERAL Rondônia</span>
+                      </div>
+                    </div>
+                    <div class="bolsistas-main">
+                      <h3>SELEÇÃO DE BOLSISTAS</h3>
+                      <div class="bolsistas-info">
+                        <p><strong>INSCRIÇÕES</strong></p>
+                        <p class="data">19/06 a 24/06</p>
+                        <p><strong>Requisitos:</strong></p>
+                        <p>Graduação em engenharia ou áreas afins</p>
+                        <p>Mestrado ou doutorado</p>
+                      </div>
+                    </div>
+                    <div class="bolsistas-footer">
+                      <button class="saiba-mais">SAIBA MAIS! ▶</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comunicados Section -->
+          <div class="comunicados-section">
+            <div class="comunicados-header">
+              <h2 class="section-title">Comunicados</h2>
+              <button class="saiba-mais-btn">SAIBA MAIS! ▶</button>
+            </div>
+
+            <div class="comunicados-content">
+              <div class="comunicado-item">
+                <div class="comunicado-icon">📋</div>
+                <div class="comunicado-text">
+                  <h3>Nota de Pesar - Manoel Argemiro Paulo</h3>
+                  <p>O Instituto Federal de Educação, Ciência e Tecnologia de Rondônia (IFRO) manifesta, em nome de toda
+                    a comunidade acadêmica, o mais profundo pesar pelo falecimento do senhor Manoel...</p>
+                </div>
+              </div>
+
+              <div class="comunicado-item">
+                <div class="comunicado-icon">📋</div>
+                <div class="comunicado-text">
+                  <h3>Nota de pesar - Lourenço Doenha</h3>
+                  <p>O Instituto Federal de Educação, Ciência e Tecnologia de Rondônia (IFRO) vem a público manifestar,
+                    em nome de toda a comunidade acadêmica, o mais profundo pesar pelo falecimento do...</p>
+                </div>
+              </div>
+
+              <div class="mais-comunicados">
+                <button class="mais-comunicados-btn">MAIS COMUNICADOS ▶</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3>Serviços</h3>
+            <a href="#">Sobre o IFRO</a>
+            <a href="#">Comunicação</a>
+            <a href="#">Ouvidoria</a>
+            <a href="#">Contato</a>
+            <a href="#">Site Antigo</a>
+            <a href="#">Fale Conosco</a>
+            <a href="#">IFRO Mobile</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>Redes Sociais</h3>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>RSS</h3>
+            <a href="#">O que é?</a>
+            <a href="#">Assine</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>Sobre o site</h3>
+            <a href="#">Acessibilidade</a>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <div class="footer-logos">
+            <div class="acesso-info-logo">
+              <div class="info-icon">ℹ️</div>
+              <span>Acesso à informação</span>
+            </div>
+
+            <div class="brasil-logo">
+              <div class="brasil-text">
+                <span class="governo">GOVERNO FEDERAL</span>
+                <span class="brasil">BRASIL</span>
+                <span class="subtitle">UNIÃO E RECONSTRUÇÃO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer Info Section -->
+    <div class="footer-info">
+      <div class="info-container">
+        <div class="instituto-info">
+          <p><strong>Instituto Federal de Educação, Ciência e Tecnologia de Rondônia REITORIA</strong></p>
+          <p>Av. Lauro Sodré, 6500 - Censipam - Aeroporto, Porto Velho - RO, 76803-260</p>
+          <p>Fone/Fax: (69) 2182-9600</p>
+          <p>Horário de atendimento: de segunda a sexta-feira - das 08h às 12h e das 14h às 18h</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer will be added here -->
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
