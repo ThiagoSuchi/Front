@@ -48,7 +48,7 @@
           <a href="#">ENTRAR/SAIR</a>
         </div>
       </div>
-      
+
       <div class="header-main">
         <div class="logo-section">
           <div class="logo">
@@ -59,7 +59,7 @@
             <p>MINISTÉRIO DA EDUCAÇÃO</p>
           </div>
         </div>
-        
+
         <div class="search-social">
           <div class="search-container">
             <input type="text" placeholder="Buscar no portal">
@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-      
+
       <nav class="main-nav">
         <a href="#">Sobre o IFRO</a>
         <a href="#">Comunicação</a>
@@ -104,41 +104,115 @@
   <!-- Conteúdo Principal -->
   <main class="main-content">
     <div class="container">
-      <div class="content-grid">
+      <!-- Banner Principal -->
+      <div class="hero-banner">
+        <div class="carousel-container">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Slide 1 - 420 Vagas -->
+            <div class="carousel-slide active">
+              <div class="slide-content">
+                <div class="slide-text">
+                  <h2>SEU LUGAR!</h2>
+                  <p>100% GRATUITO</p>
+                  <div class="slide-stats">
+                    <span class="stat-number">420</span>
+                    <span class="stat-label">VAGAS</span>
+                  </div>
+                </div>
+                <div class="slide-image">
+                  <img src="/public/image/carrossel/420vagas.png" alt="420 Vagas IFRO">
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 - Egressos -->
+            <div class="carousel-slide">
+              <div class="slide-content">
+                <div class="slide-text">
+                  <h2>ACOMPANHE</h2>
+                  <p>NOSSOS EGRESSOS</p>
+                  <div class="slide-description">
+                    <p>Conheça as histórias de sucesso dos nossos ex-alunos</p>
+                  </div>
+                </div>
+                <div class="slide-image">
+                  <img src="/public/image/carrossel/egressos.png" alt="Egressos IFRO">
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 - Minha Biblioteca -->
+            <div class="carousel-slide">
+              <div class="slide-content">
+                <div class="slide-text">
+                  <h2>ACESSE</h2>
+                  <p>MINHA BIBLIOTECA</p>
+                  <div class="slide-description">
+                    <p>Recursos digitais e acervo online disponível 24h</p>
+                  </div>
+                </div>
+                <div class="slide-image">
+                  <img src="/public/image/carrossel/minhaBiblioteca.png" alt="Minha Biblioteca IFRO">
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 - Periódicos -->
+            <div class="carousel-slide">
+              <div class="slide-content">
+                <div class="slide-text">
+                  <h2>EXPLORE</h2>
+                  <p>PERIÓDICOS CIENTÍFICOS</p>
+                  <div class="slide-description">
+                    <p>Base de dados científicos e publicações acadêmicas</p>
+                  </div>
+                </div>
+                <div class="slide-image">
+                  <img src="/public/image/carrossel/periodicos.png" alt="Periódicos IFRO">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navegação do Carrossel -->
+          <div class="carousel-navigation">
+            <button class="carousel-btn prev" id="prevBtn">‹</button>
+            <button class="carousel-btn next" id="nextBtn">›</button>
+          </div>
+
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-flex">
         <!-- Sidebar Esquerda -->
         <aside class="sidebar-left">
           <div class="ifro-logo-section">
             <div class="ifro-grid-logo">
               <div class="grid-squares">
-                <div class="square red"></div>
-                <div class="square green"></div>
-                <div class="square blue"></div>
-                <div class="square green"></div>
-                <div class="square green"></div>
-                <div class="square green"></div>
-                <div class="square green"></div>
-                <div class="square green"></div>
-                <div class="square green"></div>
+                <img class="logo-ifro" src="./public/icon/Ifro.png" alt="">
               </div>
             </div>
-            <div class="institute-text">
-              <h3>INSTITUTO FEDERAL</h3>
-              <p>Rondônia</p>
-            </div>
           </div>
-          
+
           <div class="pdi-banner">
             <span class="pdi-label">PDI</span>
             <span class="pdi-years">2023-2027</span>
           </div>
-          
+
           <div class="access-buttons">
             <button class="access-btn student">👤 Aluno</button>
             <button class="access-btn server">👤 Servidor</button>
             <button class="access-btn info">Acesso a Informação</button>
             <button class="access-btn transparency">Transparência e Prestação de contas</button>
           </div>
-          
+
           <div class="programs-section">
             <h4>Programa de Gestão e Desempenho</h4>
             <div class="program-links">
@@ -164,12 +238,12 @@
               <h4>ACESSO À INFORMAÇÃO</h4>
               <span class="dropdown-arrow">▼</span>
             </div>
-            
+
             <div class="campi-header active">
               <h4>CAMPI</h4>
               <span class="dropdown-arrow">▲</span>
             </div>
-            
+
             <div class="campi-list">
               <a href="#">Ariquemes</a>
               <a href="#">Buritis</a>
@@ -185,129 +259,48 @@
           </div>
         </aside>
 
+
         <!-- Conteúdo Central -->
         <div class="main-section">
-          <!-- Banner Principal -->
-          <div class="hero-banner">
-            <div class="carousel-container">
-              <div class="carousel-track" id="carouselTrack">
-                <!-- Slide 1 - 420 Vagas -->
-                <div class="carousel-slide active">
-                  <div class="slide-content">
-                    <div class="slide-text">
-                      <h2>SEU LUGAR!</h2>
-                      <p>100% GRATUITO</p>
-                      <div class="slide-stats">
-                        <span class="stat-number">420</span>
-                        <span class="stat-label">VAGAS</span>
-                      </div>
-                    </div>
-                    <div class="slide-image">
-                      <img src="/public/image/carrossel/420vagas.png" alt="420 Vagas IFRO">
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Slide 2 - Egressos -->
-                <div class="carousel-slide">
-                  <div class="slide-content">
-                    <div class="slide-text">
-                      <h2>ACOMPANHE</h2>
-                      <p>NOSSOS EGRESSOS</p>
-                      <div class="slide-description">
-                        <p>Conheça as histórias de sucesso dos nossos ex-alunos</p>
-                      </div>
-                    </div>
-                    <div class="slide-image">
-                      <img src="/public/image/carrossel/egressos.png" alt="Egressos IFRO">
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Slide 3 - Minha Biblioteca -->
-                <div class="carousel-slide">
-                  <div class="slide-content">
-                    <div class="slide-text">
-                      <h2>ACESSE</h2>
-                      <p>MINHA BIBLIOTECA</p>
-                      <div class="slide-description">
-                        <p>Recursos digitais e acervo online disponível 24h</p>
-                      </div>
-                    </div>
-                    <div class="slide-image">
-                      <img src="/public/image/carrossel/minhaBiblioteca.png" alt="Minha Biblioteca IFRO">
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Slide 4 - Periódicos -->
-                <div class="carousel-slide">
-                  <div class="slide-content">
-                    <div class="slide-text">
-                      <h2>EXPLORE</h2>
-                      <p>PERIÓDICOS CIENTÍFICOS</p>
-                      <div class="slide-description">
-                        <p>Base de dados científicos e publicações acadêmicas</p>
-                      </div>
-                    </div>
-                    <div class="slide-image">
-                      <img src="/public/image/carrossel/periodicos.png" alt="Periódicos IFRO">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Navegação do Carrossel -->
-              <div class="carousel-navigation">
-                <button class="carousel-btn prev" id="prevBtn">‹</button>
-                <button class="carousel-btn next" id="nextBtn">›</button>
-              </div>
-              
-              <!-- Indicadores -->
-              <div class="carousel-indicators">
-                <span class="indicator active" data-slide="0"></span>
-                <span class="indicator" data-slide="1"></span>
-                <span class="indicator" data-slide="2"></span>
-                <span class="indicator" data-slide="3"></span>
-              </div>
-            </div>
-          </div>
-
           <!-- Seção de Notícias -->
           <section class="news-section">
             <h2>Notícias</h2>
-            
+
             <div class="featured-news">
               <h3>Últimos dias para inscrição na pós em Gestão em EaD</h3>
-              
+
               <div class="news-content">
                 <div class="news-image">
                   <img src="/public/image/EAD.png" alt="EAD IFRO">
                   <div class="news-overlay">
                     <div class="edital-badge">EDITAL 25/2024</div>
-                    <h4>Pós-Graduação em Gestão em Educação a distância (EaD) em parceria com a Universidade Aberta do Brasil (UAB/IFRO)</h4>
+                    <h4>Pós-Graduação em Gestão em Educação a distância (EaD) em parceria com a Universidade Aberta do
+                      Brasil (UAB/IFRO)</h4>
                     <p class="course-type">Curso EaD - gratuito</p>
                     <a href="#" class="apply-link">http://bit.ly/3FyAmTx</a>
                   </div>
                 </div>
-                
+
                 <div class="news-text">
                   <div class="news-meta">
                     <span class="category">NOVOS ALUNOS</span>
                     <h4>PSS/IFRO 2025/2: recursos contra o Resultado Preliminar podem ser feitos até esta terça</h4>
-                    <p>Com a publicação do Resultado Preliminar do PSS (Processo Seletivo Simplificado) 2025/2 do Instituto Federal de Educação, Ciência e Tecnologia...</p>
+                    <p>Com a publicação do Resultado Preliminar do PSS (Processo Seletivo Simplificado) 2025/2 do
+                      Instituto Federal de Educação, Ciência e Tecnologia...</p>
                   </div>
-                  
+
                   <div class="news-meta">
                     <span class="category">EXTENSÃO</span>
                     <h4>Mulher de Fibra/IFRO seleciona alunas para cursos gratuitos de Operadora de</h4>
-                    <p>A Pró-Reitoria de Extensão do Instituto Federal de Educação, Ciência e Tecnologia de Rondônia (Proex/IFRO) está com inscrições abertas...</p>
+                    <p>A Pró-Reitoria de Extensão do Instituto Federal de Educação, Ciência e Tecnologia de Rondônia
+                      (Proex/IFRO) está com inscrições abertas...</p>
                   </div>
-                  
+
                   <div class="news-meta">
                     <span class="category">AUDITORIA</span>
                     <h4>Auditoria interna de processo seletivo de discente avalia governança, controles e gestão</h4>
-                    <p>O Instituto Federal de Educação, Ciência e Tecnologia de Rondônia (IFRO) realizou auditoria sobre o processo seletivo de discentes (cursos...</p>
+                    <p>O Instituto Federal de Educação, Ciência e Tecnologia de Rondônia (IFRO) realizou auditoria sobre
+                      o processo seletivo de discentes (cursos...</p>
                   </div>
                 </div>
               </div>
@@ -317,7 +310,7 @@
           <!-- Seção Campi -->
           <section class="campi-gallery-section">
             <h2>Campi</h2>
-            
+
             <div class="gallery-grid">
               <div class="gallery-item featured">
                 <img src="/public/image/edital.png" alt="Edital IFRO">
@@ -328,23 +321,23 @@
                   <a href="#" class="gallery-link">http://bit.ly/3FyAmTx</a>
                 </div>
               </div>
-              
+
               <div class="gallery-item">
                 <img src="/public/image/minhaBiblioteca.png" alt="Minha Biblioteca">
               </div>
-              
+
               <div class="gallery-item">
                 <img src="/public/image/periodicos.png" alt="Periódicos">
               </div>
-              
+
               <div class="gallery-item">
                 <img src="/public/image/egressos.png" alt="Egressos">
               </div>
-              
+
               <div class="gallery-item">
                 <img src="/public/icon/crGT2h.png" alt="QR Code">
               </div>
-              
+
               <div class="gallery-item yellow-card">
                 <div class="card-content">
                   <h3>3ª EDIÇÃO</h3>
@@ -355,15 +348,15 @@
                   <p class="card-subtitle">GRATUITO - PRESENCIAL</p>
                 </div>
               </div>
-              
+
               <div class="gallery-item">
                 <img src="https://via.placeholder.com/300x200" alt="Atividade prática">
               </div>
-              
+
               <div class="gallery-item">
                 <img src="https://via.placeholder.com/300x200" alt="Apresentação">
               </div>
-              
+
               <div class="gallery-item">
                 <img src="https://via.placeholder.com/300x200" alt="Projeto">
               </div>

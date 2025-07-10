@@ -240,10 +240,10 @@ body {
   padding: 30px 0;
 }
 
-.content-grid {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 30px;
+.content-flex {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 /* Sidebar Esquerda */
@@ -265,33 +265,11 @@ body {
 }
 
 .grid-squares {
-  display: grid;
-  grid-template-columns: repeat(3, 15px);
-  gap: 3px;
-  justify-content: center;
   margin-bottom: 10px;
 }
 
-.square {
-  width: 15px;
-  height: 15px;
-  border-radius: 2px;
-}
-
-.square.red { background: #f44336; }
-.square.green { background: #4caf50; }
-.square.blue { background: #2196f3; }
-
-.institute-text h3 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.institute-text p {
-  font-size: 12px;
-  color: #666;
+.logo-ifro {
+  width: 200px;
 }
 
 .pdi-banner {
@@ -384,11 +362,12 @@ body {
 
 /* Banner Principal - Carrossel */
 .hero-banner {
+  margin-top: 5rem;
   position: relative;
   background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 50%, #ffd3a5 100%);
-  height: 200px;
+  height: 400px;
   overflow: hidden;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
 }
 
 .carousel-container {
@@ -413,6 +392,7 @@ body {
   padding: 30px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  margin: 1;
   position: relative;
   overflow: hidden;
 }
@@ -436,7 +416,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   width: 320px;
-  color: #2e7d32;
+  color: #a9ccaa;
   z-index: 3;
   padding: 25px;
   background: rgba(255, 255, 255, 0.96);
@@ -593,24 +573,24 @@ body {
 /* Navegação do Carrossel */
 .carousel-navigation {
   position: absolute;
-  bottom: 25px;
-  right: 25px;
+  bottom: 44%;
+  right: 16px;
   display: flex;
-  gap: 12px;
+  gap: 63rem;
 }
 
 .carousel-btn {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border: none;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 50%;
-  font-size: 22px;
+  font-size: 25pt;
   font-weight: bold;
   color: #2e7d32;
   cursor: pointer;
   transition: all 0.4s ease;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.377);
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
