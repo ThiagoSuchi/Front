@@ -1,25 +1,55 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "useDefineForClassFields": true,
+    /* Configurações básicas */
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+    "useDefineForClassFields": true,
 
-    /* Bundler mode */
+    /* Resolução de módulos */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
 
-    /* Linting */
+    /* Emissão */
+    "noEmit": true,
+    "declaration": false,
+    "outDir": "dist",
+
+    /* Type checking */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": false,
+
+    /* Configurações adicionais */
+    "forceConsistentCasingInFileNames": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    
+    /* Configurações para ambiente DOM */
+    "jsx": "preserve"
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "vite.config.ts",
+    "*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
 }

@@ -1,0 +1,130 @@
+// Classe para gerenciar submenus
+export class GerenciadorSubmenu {
+  private itensComSubmenu: NodeListOf<Element>;
+  private submenuAtivo: Element | null = null;
+
+  constructor() {
+    this.itensComSubmenu = document.querySelectorAll('.item-com-submenu');
+    this.inicializar();
+  }
+
+  private inicializar(): void {
+    this.itensComSubmenu.forEach(item => {
+      const submenu = item.querySelector('.submenu');
+      const linkPrincipal = item.querySelector('.link-navegacao');
+      
+      if (!submenu || !linkPrincipal) return;
+
+      // Evento de clique no link principal
+      linkPrincipal.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.alternarSubmenu(item, submenu);
+      });
+
+      // Hover para desktop (apenas visual feedback no link, não na seta)
+      item.addEventListener('mouseenter', () => {
+        if (!item.classList.contains('ativo')) {
+          item.classList.add('hover');
+        }
+      });
+
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove('hover');
+      });
+
+      // Navegação por teclado
+      this.configurarNavegacaoTeclado(item, submenu, linkPrincipal);
+    });
+
+    // Fechar submenu ao clicar fora
+    document.addEventListener('click', (e) => {
+      const target = e.target as Element;
+      if (!target.closest('.item-com-submenu') && this.submenuAtivo) {
+        this.fecharSubmenu(this.submenuAtivo);
+      }
+    });
+
+    // Fechar submenu ao pressionar ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.submenuAtivo) {
+        this.fecharSubmenu(this.submenuAtivo);
+      }
+    });
+  }
+
+  private alternarSubmenu(item: Element, submenu: Element): void {
+    if (item.classList.contains('ativo')) {
+      this.fecharSubmenu(item);
+    } else {
+      // Fecha qualquer submenu aberto
+      if (this.submenuAtivo && this.submenuAtivo !== item) {
+        this.fecharSubmenu(this.submenuAtivo);
+      }
+      this.abrirSubmenu(item, submenu);
+    }
+  }
+
+  private abrirSubmenu(item: Element, submenu: Element): void {
+    item.classList.add('ativo');
+    submenu.classList.add('ativo');
+    this.submenuAtivo = item;
+
+    // A seta vai girar automaticamente pelo CSS quando .ativo for adicionado
+  }
+
+  private fecharSubmenu(item: Element): void {
+    const submenu = item.querySelector('.submenu');
+    
+    item.classList.remove('ativo', 'hover');
+    submenu?.classList.remove('ativo');
+    
+    if (this.submenuAtivo === item) {
+      this.submenuAtivo = null;
+    }
+
+    // A seta vai voltar automaticamente pelo CSS quando .ativo for removido
+  }
+
+  private configurarNavegacaoTeclado(item: Element, submenu: Element, linkPrincipal: Element): void {
+    linkPrincipal.addEventListener('keydown', (e) => {
+      const keyEvent = e as KeyboardEvent;
+      
+      if (keyEvent.key === 'ArrowDown') {
+        keyEvent.preventDefault();
+        if (!item.classList.contains('ativo')) {
+          this.abrirSubmenu(item, submenu);
+        }
+        const primeiroLink = submenu.querySelector('.link-submenu') as HTMLElement;
+        if (primeiroLink) primeiroLink.focus();
+      } else if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+        keyEvent.preventDefault();
+        this.alternarSubmenu(item, submenu);
+      }
+    });
+
+    // Configurar navegação dentro do submenu
+    const linksSubmenu = submenu.querySelectorAll('.link-submenu');
+    linksSubmenu.forEach((link, index) => {
+      link.addEventListener('keydown', (e) => {
+        const keyEvent = e as KeyboardEvent;
+        
+        if (keyEvent.key === 'ArrowUp') {
+          keyEvent.preventDefault();
+          if (index > 0) {
+            (linksSubmenu[index - 1] as HTMLElement).focus();
+          } else {
+            (linkPrincipal as HTMLElement).focus();
+          }
+        } else if (keyEvent.key === 'ArrowDown') {
+          keyEvent.preventDefault();
+          if (index < linksSubmenu.length - 1) {
+            (linksSubmenu[index + 1] as HTMLElement).focus();
+          }
+        } else if (keyEvent.key === 'Escape') {
+          this.fecharSubmenu(item);
+          (linkPrincipal as HTMLElement).focus();
+        }
+      });
+    });
+  }
+}

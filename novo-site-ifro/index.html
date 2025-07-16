@@ -1,378 +1,542 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/public/icon/Ifro.png" />
+  <link rel="icon" type="image/png" href="/public/icon/if.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instituto Federal de Rondônia - IFRO</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./src/styles/main.css">
+  <title>IFRO - Instituto Federal de Rondônia</title>
+  <link rel="stylesheet" href="/src/styles/global.css">
+  <link rel="stylesheet" href="/src/styles/cabecalho.css">
+  <link rel="stylesheet" href="/src/styles/banner-principal.css">
+  <link rel="stylesheet" href="/src/styles/pesquisa.css">
+  <link rel="stylesheet" href="/src/styles/sobre.css">
+  <link rel="stylesheet" href="/src/styles/cursos.css">
+  <link rel="stylesheet" href="/src/styles/noticias.css">
+  <link rel="stylesheet" href="/src/styles/rodape.css">
 </head>
-
 <body>
-  <!-- Header do Governo -->
-  <header class="governo-header">
-    <div class="container">
-      <div class="governo-nav">
-        <div class="logo-governo">
-          <span>gov.br</span>
-        </div>
-        <nav class="governo-menu">
-          <a href="#">COMUNICA BR</a>
-          <a href="#">ACESSO À INFORMAÇÃO</a>
-          <a href="#">PARTICIPE</a>
-          <a href="#">LEGISLAÇÃO</a>
-          <a href="#">ÓRGÃOS DO GOVERNO</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <!-- Header Principal -->
-  <header class="main-header">
-    <div class="container">
-      <div class="header-top">
-        <div class="breadcrumb">
-          <span>🏠 para se comunicar</span>
-          <span>📱 para se mover</span>
-          <span>🏢 para se buscar</span>
-          <span>🎓 para se educar</span>
-        </div>
-        <div class="header-actions">
-          <a href="#">ACESSIBILIDADE</a>
-          <a href="#">ALTO CONTRASTE</a>
-          <a href="#">MAPA DO SITE</a>
-          <a href="#">ENTRAR/SAIR</a>
-        </div>
-      </div>
-
-      <div class="header-main">
-        <div class="logo-section">
-          <div class="logo">
-            <img src="/public/icon/Ifro.png" alt="IFRO Logo">
+  <!-- Cabeçalho -->
+  <header class="cabecalho" id="cabecalho">
+    <div class="container-cabecalho">
+      <div class="logo-container">
+        <div class="logo-ifro">
+          <div class="logo-simbolo">
+            <div class="simbolo-if">
+             <img src="./public/icon/if.png" alt="">
+            </div>
           </div>
-          <div class="institution-info">
-            <h1>Instituto Federal de Rondônia</h1>
-            <p>MINISTÉRIO DA EDUCAÇÃO</p>
-          </div>
-        </div>
-
-        <div class="search-social">
-          <div class="search-container">
-            <input type="text" placeholder="Buscar no portal">
-            <button type="submit">🔍</button>
-          </div>
-          <div class="social-icons">
-            <a href="#"><img src="/public/icon/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="/public/icon/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="/public/icon/youtube.png" alt="YouTube"></a>
-            <a href="#"><img src="/public/icon/instagram.png" alt="Instagram"></a>
+          <div class="logo-texto">
+            <h1 class="titulo-logo">IFRO</h1>
+            <p class="subtitulo-logo">Instituto Federal de Rondônia</p>
           </div>
         </div>
       </div>
 
-      <nav class="main-nav">
-        <a href="#">Sobre o IFRO</a>
-        <a href="#">Comunicação</a>
-        <a href="#">Ouvidoria</a>
-        <a href="#">Contato</a>
-        <a href="#">Site Antigo</a>
-        <a href="#">Fale Conosco</a>
-        <a href="#">IFRO Mobile</a>
+      <nav class="navegacao-principal" id="navegacao-principal">
+        <ul class="lista-navegacao">
+          <li class="item-navegacao">
+            <a href="#inicio" class="link-navegacao">
+              <span class="texto-nav">Início</span>
+            </a>
+          </li>
+          <li class="item-navegacao item-com-submenu">
+            <a href="#instituicao" class="link-navegacao">
+              <span class="texto-nav">Instituição</span>
+              <svg class="icone-seta" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </a>
+            <ul class="submenu">
+              <li><a href="#historia" class="link-submenu">História</a></li>
+              <li><a href="#missao" class="link-submenu">Missão e Visão</a></li>
+              <li><a href="#reitoria" class="link-submenu">Reitoria</a></li>
+              <li><a href="#estrutura" class="link-submenu">Estrutura Organizacional</a></li>
+            </ul>
+          </li>
+          <li class="item-navegacao item-com-submenu">
+            <a href="#ensino" class="link-navegacao">
+              <span class="texto-nav">Ensino</span>
+              <svg class="icone-seta" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </a>
+            <ul class="submenu">
+              <li><a href="#tecnicos" class="link-submenu">Cursos Técnicos</a></li>
+              <li><a href="#graduacao" class="link-submenu">Graduação</a></li>
+              <li><a href="#pos-graduacao" class="link-submenu">Pós-Graduação</a></li>
+              <li><a href="#ead" class="link-submenu">Educação a Distância</a></li>
+            </ul>
+          </li>
+          <li class="item-navegacao">
+            <a href="#pesquisa" class="link-navegacao">
+              <span class="texto-nav">Pesquisa</span>
+            </a>
+          </li>
+          <li class="item-navegacao">
+            <a href="#extensao" class="link-navegacao">
+              <span class="texto-nav">Extensão</span>
+            </a>
+          </li>
+          <li class="item-navegacao">
+            <a href="#noticias" class="link-navegacao">
+              <span class="texto-nav">Notícias</span>
+            </a>
+          </li>
+        </ul>
       </nav>
+
+      <div class="acoes-cabecalho">
+        <button class="botao-portal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Portal do Aluno</span>
+        </button>
+        <button class="botao-contato">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Contato</span>
+        </button>
+      </div>
+
+      <button class="botao-menu-mobile" id="botao-menu-mobile">
+        <span class="linha-menu"></span>
+        <span class="linha-menu"></span>
+        <span class="linha-menu"></span>
+      </button>
     </div>
   </header>
 
-  <!-- Menu de Acesso Rápido -->
-  <section class="quick-access">
-    <div class="container">
-      <div class="access-tabs">
-        <button class="tab active">ACESSO RÁPIDO</button>
-        <button class="tab">EAD - AVA</button>
-        <button class="tab">SELEÇÃO</button>
-        <button class="tab">PAINEL DE INDICADORES</button>
-        <button class="tab">SEI - IFRO</button>
-        <button class="tab">WIKI</button>
-        <button class="tab">BIBLIOTECA</button>
+  <!-- Banner Principal -->
+  <section class="banner-principal" id="inicio">
+    <!-- Elementos decorativos -->
+    <div class="elemento-decorativo"></div>
+    <div class="elemento-decorativo"></div>
+    
+    <div class="container-banner">
+      <div class="conteudo-banner">
+        <div class="texto-banner">
+          <h1 class="titulo-principal">
+            Transformando Vidas Através da 
+            <span class="destaque-titulo">Educação</span>
+          </h1>
+          <p class="subtitulo-banner">
+            O Instituto Federal de Rondônia oferece ensino técnico, graduação e pós-graduação 
+            com excelência, preparando profissionais para o mercado de trabalho e contribuindo 
+            para o desenvolvimento regional.
+          </p>
+          <div class="botoes-banner">
+            <button class="botao botao-primario">
+              Conheça Nossos Cursos
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12,5 19,12 12,19"></polyline>
+              </svg>
+            </button>
+            <button class="botao botao-secundario">Saiba Mais</button>
+          </div>
+        </div>
+        <div class="imagem-banner">
+          <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=600" 
+               alt="Estudantes do IFRO" class="imagem-principal" />
+        </div>
+      </div>
+      
+      <div class="estatisticas-banner">
+        <div class="item-estatistica">
+          <div class="icone-estatistica">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <div class="texto-estatistica">
+            <h3>50+</h3>
+            <p>Cursos Oferecidos</p>
+          </div>
+        </div>
+        <div class="item-estatistica">
+          <div class="icone-estatistica">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="texto-estatistica">
+            <h3>15,000+</h3>
+            <p>Alunos Ativos</p>
+          </div>
+        </div>
+        <div class="item-estatistica">
+          <div class="icone-estatistica">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+            </svg>
+          </div>
+          <div class="texto-estatistica">
+            <h3>20+</h3>
+            <p>Anos de Excelência</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Conteúdo Principal -->
-  <main class="main-content">
-    <div class="container">
-      <!-- Banner Principal -->
-      <div class="hero-banner">
-        <div class="carousel-container">
-          <div class="carousel-track" id="carouselTrack">
-            <!-- Slide 1 - 420 Vagas -->
-            <div class="carousel-slide active">
-              <div class="slide-content">
-                <div class="slide-text">
-                  <h2>SEU LUGAR!</h2>
-                  <p>100% GRATUITO</p>
-                  <div class="slide-stats">
-                    <span class="stat-number">420</span>
-                    <span class="stat-label">VAGAS</span>
-                  </div>
-                </div>
-                <div class="slide-image">
-                  <img src="/public/image/carrossel/420vagas.png" alt="420 Vagas IFRO">
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2 - Egressos -->
-            <div class="carousel-slide">
-              <div class="slide-content">
-                <div class="slide-text">
-                  <h2>ACOMPANHE</h2>
-                  <p>NOSSOS EGRESSOS</p>
-                  <div class="slide-description">
-                    <p>Conheça as histórias de sucesso dos nossos ex-alunos</p>
-                  </div>
-                </div>
-                <div class="slide-image">
-                  <img src="/public/image/carrossel/egressos.png" alt="Egressos IFRO">
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3 - Minha Biblioteca -->
-            <div class="carousel-slide">
-              <div class="slide-content">
-                <div class="slide-text">
-                  <h2>ACESSE</h2>
-                  <p>MINHA BIBLIOTECA</p>
-                  <div class="slide-description">
-                    <p>Recursos digitais e acervo online disponível 24h</p>
-                  </div>
-                </div>
-                <div class="slide-image">
-                  <img src="/public/image/carrossel/minhaBiblioteca.png" alt="Minha Biblioteca IFRO">
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 4 - Periódicos -->
-            <div class="carousel-slide">
-              <div class="slide-content">
-                <div class="slide-text">
-                  <h2>EXPLORE</h2>
-                  <p>PERIÓDICOS CIENTÍFICOS</p>
-                  <div class="slide-description">
-                    <p>Base de dados científicos e publicações acadêmicas</p>
-                  </div>
-                </div>
-                <div class="slide-image">
-                  <img src="/public/image/carrossel/periodicos.png" alt="Periódicos IFRO">
-                </div>
-              </div>
-            </div>
+  <!-- Barra de Pesquisa -->
+  <section class="secao-pesquisa" id="pesquisa-rapida">
+    <div class="container-pesquisa">
+      <div class="conteudo-pesquisa">
+        <h2 class="titulo-pesquisa">O que você está procurando?</h2>
+        <p class="subtitulo-pesquisa">
+          Encontre rapidamente cursos, notícias, informações e muito mais
+        </p>
+        
+        <div class="barra-pesquisa-container">
+          <div class="barra-pesquisa">
+            <svg class="icone-pesquisa" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input 
+              type="text" 
+              class="input-pesquisa" 
+              placeholder="Digite sua pesquisa aqui..."
+              id="input-pesquisa-principal"
+            />
+            <button class="botao-pesquisar" type="button" id="botao-pesquisar">
+              <span>Pesquisar</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12,5 19,12 12,19"></polyline>
+              </svg>
+            </button>
           </div>
-
-          <!-- Navegação do Carrossel -->
-          <div class="carousel-navigation">
-            <button class="carousel-btn prev" id="prevBtn">‹</button>
-            <button class="carousel-btn next" id="nextBtn">›</button>
-          </div>
-
-          <!-- Indicadores -->
-          <div class="carousel-indicators">
-            <span class="indicator active" data-slide="0"></span>
-            <span class="indicator" data-slide="1"></span>
-            <span class="indicator" data-slide="2"></span>
-            <span class="indicator" data-slide="3"></span>
+          
+          <div class="sugestoes-pesquisa">
+            <span class="texto-sugestoes">Pesquisas populares:</span>
+            <div class="tags-sugestoes">
+              <button class="tag-sugestao" data-pesquisa="cursos técnicos">Cursos Técnicos</button>
+              <button class="tag-sugestao" data-pesquisa="graduação">Graduação</button>
+              <button class="tag-sugestao" data-pesquisa="inscrições">Inscrições</button>
+              <button class="tag-sugestao" data-pesquisa="processo seletivo">Processo Seletivo</button>
+              <button class="tag-sugestao" data-pesquisa="biblioteca">Biblioteca</button>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="content-flex">
-        <!-- Sidebar Esquerda -->
-        <aside class="sidebar-left">
-          <div class="ifro-logo-section">
-            <div class="ifro-grid-logo">
-              <div class="grid-squares">
-                <img class="logo-ifro" src="./public/icon/Ifro.png" alt="">
-              </div>
+
+        <div class="atalhos-rapidos">
+          <div class="item-atalho">
+            <div class="icone-atalho">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <div class="texto-atalho">
+              <h4>Catálogo de Cursos</h4>
+              <p>Explore todos os nossos cursos</p>
             </div>
           </div>
 
-          <div class="pdi-banner">
-            <span class="pdi-label">PDI</span>
-            <span class="pdi-years">2023-2027</span>
-          </div>
-
-          <div class="access-buttons">
-            <button class="access-btn student">👤 Aluno</button>
-            <button class="access-btn server">👤 Servidor</button>
-            <button class="access-btn info">Acesso a Informação</button>
-            <button class="access-btn transparency">Transparência e Prestação de contas</button>
-          </div>
-
-          <div class="programs-section">
-            <h4>Programa de Gestão e Desempenho</h4>
-            <div class="program-links">
-              <a href="#">Nossos Cursos</a>
-              <a href="#">Editais</a>
+          <div class="item-atalho">
+            <div class="icone-atalho">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="texto-atalho">
+              <h4>Portal do Aluno</h4>
+              <p>Acesse sua área do estudante</p>
             </div>
           </div>
 
-          <!-- Widget E-MEC -->
-          <div class="emec-widget">
-            <div class="emec-logo">
-              <img src="/public/icon/e-mec.png.webp" alt="e-MEC">
+          <div class="item-atalho">
+            <div class="icone-atalho">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
             </div>
-            <div class="qr-code-section">
-              <div class="qr-code-emec"></div>
-            </div>
-            <button class="access-button">ACESSE AQUI</button>
-          </div>
-
-          <!-- Lista de Campi -->
-          <div class="campi-section">
-            <div class="campi-header">
-              <h4>ACESSO À INFORMAÇÃO</h4>
-              <span class="dropdown-arrow">▼</span>
-            </div>
-
-            <div class="campi-header active">
-              <h4>CAMPI</h4>
-              <span class="dropdown-arrow">▲</span>
-            </div>
-
-            <div class="campi-list">
-              <a href="#">Ariquemes</a>
-              <a href="#">Buritis</a>
-              <a href="#">Cacoal</a>
-              <a href="#">Colorado do Oeste</a>
-              <a href="#">Guajará-Mirim</a>
-              <a href="#">Jaru</a>
-              <a href="#">Ji-Paraná</a>
-              <a href="#">São Miguel do Guaporé</a>
-              <a href="#">Porto Velho Zona Norte</a>
-              <a href="#">Porto Velho Calama</a>
+            <div class="texto-atalho">
+              <h4>Calendário Acadêmico</h4>
+              <p>Confira datas importantes</p>
             </div>
           </div>
-        </aside>
 
-
-        <!-- Conteúdo Central -->
-        <div class="main-section">
-          <!-- Seção de Notícias -->
-          <section class="news-section">
-            <h2>Notícias</h2>
-
-            <div class="featured-news">
-              <h3>Últimos dias para inscrição na pós em Gestão em EaD</h3>
-
-              <div class="news-content">
-                <div class="news-image">
-                  <img src="/public/image/EAD.png" alt="EAD IFRO">
-                  <div class="news-overlay">
-                    <div class="edital-badge">EDITAL 25/2024</div>
-                    <h4>Pós-Graduação em Gestão em Educação a distância (EaD) em parceria com a Universidade Aberta do
-                      Brasil (UAB/IFRO)</h4>
-                    <p class="course-type">Curso EaD - gratuito</p>
-                    <a href="#" class="apply-link">http://bit.ly/3FyAmTx</a>
-                  </div>
-                </div>
-
-                <div class="news-text">
-                  <div class="news-meta">
-                    <span class="category">NOVOS ALUNOS</span>
-                    <h4>PSS/IFRO 2025/2: recursos contra o Resultado Preliminar podem ser feitos até esta terça</h4>
-                    <p>Com a publicação do Resultado Preliminar do PSS (Processo Seletivo Simplificado) 2025/2 do
-                      Instituto Federal de Educação, Ciência e Tecnologia...</p>
-                  </div>
-
-                  <div class="news-meta">
-                    <span class="category">EXTENSÃO</span>
-                    <h4>Mulher de Fibra/IFRO seleciona alunas para cursos gratuitos de Operadora de</h4>
-                    <p>A Pró-Reitoria de Extensão do Instituto Federal de Educação, Ciência e Tecnologia de Rondônia
-                      (Proex/IFRO) está com inscrições abertas...</p>
-                  </div>
-
-                  <div class="news-meta">
-                    <span class="category">AUDITORIA</span>
-                    <h4>Auditoria interna de processo seletivo de discente avalia governança, controles e gestão</h4>
-                    <p>O Instituto Federal de Educação, Ciência e Tecnologia de Rondônia (IFRO) realizou auditoria sobre
-                      o processo seletivo de discentes (cursos...</p>
-                  </div>
-                </div>
-              </div>
+          <div class="item-atalho">
+            <div class="icone-atalho">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
             </div>
-          </section>
-
-          <!-- Seção Campi -->
-          <section class="campi-gallery-section">
-            <h2>Campi</h2>
-
-            <div class="gallery-grid">
-              <div class="gallery-item featured">
-                <img src="/public/image/edital.png" alt="Edital IFRO">
-                <div class="gallery-overlay">
-                  <div class="edital-badge">EDITAL 25/2024</div>
-                  <h4>Assistente para pessoas de necessidades especiais de desenvolvimento na universidade...</h4>
-                  <p class="course-info">INSCRIÇÕES DO DIA 01 A 07/01</p>
-                  <a href="#" class="gallery-link">http://bit.ly/3FyAmTx</a>
-                </div>
-              </div>
-
-              <div class="gallery-item">
-                <img src="/public/image/minhaBiblioteca.png" alt="Minha Biblioteca">
-              </div>
-
-              <div class="gallery-item">
-                <img src="/public/image/periodicos.png" alt="Periódicos">
-              </div>
-
-              <div class="gallery-item">
-                <img src="/public/image/egressos.png" alt="Egressos">
-              </div>
-
-              <div class="gallery-item">
-                <img src="/public/icon/crGT2h.png" alt="QR Code">
-              </div>
-
-              <div class="gallery-item yellow-card">
-                <div class="card-content">
-                  <h3>3ª EDIÇÃO</h3>
-                  <h4>TÉCNICO EM AGENTES CUIDADORES DE IDOSOS COM MOBILIDADE REDUZIDA</h4>
-                  <div class="qr-code">
-                    <div class="qr-placeholder"></div>
-                  </div>
-                  <p class="card-subtitle">GRATUITO - PRESENCIAL</p>
-                </div>
-              </div>
-
-              <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200" alt="Atividade prática">
-              </div>
-
-              <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200" alt="Apresentação">
-              </div>
-
-              <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200" alt="Projeto">
-              </div>
+            <div class="texto-atalho">
+              <h4>Contato</h4>
+              <p>Entre em contato conosco</p>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Acessibilidade -->
-  <div class="accessibility-widget">
-    <button class="accessibility-btn">♿</button>
-  </div>
+  <!-- Sobre a Instituição -->
+  <section class="sobre-instituicao" id="instituicao">
+    <div class="container-sobre">
+      <div class="cabecalho-secao">
+        <h2 class="titulo-secao">Sobre o IFRO</h2>
+        <p class="subtitulo-secao">
+          Conheça nossa história, missão e valores que norteiam nossa jornada educacional
+        </p>
+      </div>
 
+      <div class="conteudo-sobre">
+        <div class="historia-instituicao">
+          <h3 class="titulo-historia">Nossa História</h3>
+          <p class="texto-historia">
+            O Instituto Federal de Educação, Ciência e Tecnologia de Rondônia foi criado em 2008, 
+            a partir da integração da Escola Técnica Federal de Rondônia e da Escola Agrotécnica 
+            Federal de Colorado do Oeste. Desde então, temos sido uma referência em educação 
+            profissional e tecnológica na região Norte do Brasil.
+          </p>
+          <p class="texto-historia">
+            Com mais de uma década de atuação, o IFRO expandiu sua presença para diversos 
+            municípios de Rondônia, oferecendo cursos técnicos, superiores e de pós-graduação, 
+            sempre com foco na excelência do ensino e na formação integral dos estudantes.
+          </p>
+        </div>
+
+        <div class="valores-instituicao">
+          <div class="item-valor">
+            <div class="icone-valor">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12,6 12,12 16,14"></polyline>
+              </svg>
+            </div>
+            <div class="texto-valor">
+              <h4>Missão</h4>
+              <p>
+                Ofertar educação profissional, científica e tecnológica pública de excelência, 
+                promovendo a formação integral do cidadão para o desenvolvimento sustentável.
+              </p>
+            </div>
+          </div>
+
+          <div class="item-valor">
+            <div class="icone-valor">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div class="texto-valor">
+              <h4>Visão</h4>
+              <p>
+                Ser reconhecida como instituição de referência em educação profissional e 
+                tecnológica, contribuindo para o desenvolvimento regional e nacional.
+              </p>
+            </div>
+          </div>
+
+          <div class="item-valor">
+            <div class="icone-valor">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <div class="texto-valor">
+              <h4>Valores</h4>
+              <p>
+                Ética, transparência, excelência, sustentabilidade, inclusão social, 
+                inovação e compromisso com a transformação social.
+              </p>
+            </div>
+          </div>
+
+          <div class="item-valor">
+            <div class="icone-valor">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+              </svg>
+            </div>
+            <div class="texto-valor">
+              <h4>Excelência</h4>
+              <p>
+                Compromisso com a qualidade em todas as atividades desenvolvidas, 
+                buscando sempre a melhoria contínua e a inovação.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cursos -->
+  <section class="cursos" id="ensino">
+    <div class="container-cursos">
+      <div class="cabecalho-secao">
+        <h2 class="titulo-secao">Nossos Cursos</h2>
+        <p class="subtitulo-secao">
+          Explore nossa ampla gama de cursos técnicos e superiores, 
+          desenvolvidos para preparar você para o mercado de trabalho
+        </p>
+      </div>
+
+      <div class="filtros-cursos" id="filtros-cursos">
+        <button class="filtro-botao filtro-ativo" data-filtro="todos">Todos</button>
+        <button class="filtro-botao" data-filtro="tecnico">Técnico</button>
+        <button class="filtro-botao" data-filtro="graduacao">Graduação</button>
+      </div>
+
+      <div class="grade-cursos" id="grade-cursos">
+        <!-- código ts -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Notícias -->
+  <section class="noticias" id="noticias">
+    <div class="container-noticias">
+      <div class="cabecalho-secao">
+        <h2 class="titulo-secao">Notícias e Eventos</h2>
+        <p class="subtitulo-secao">
+          Acompanhe as últimas novidades, conquistas e eventos do IFRO
+        </p>
+      </div>
+
+      <div class="grade-noticias" id="grade-noticias">
+        <!-- As notícias serão inseridas dinamicamente via JavaScript -->
+      </div>
+
+      <div class="rodape-noticias">
+        <button class="botao botao-secundario">
+          Ver Todas as Notícias
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12,5 19,12 12,19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="rodape" id="contato">
+    <div class="container-rodape">
+      <div class="conteudo-rodape">
+        <div class="coluna-rodape">
+          <div class="logo-rodape">
+                <img src="./public/icon/governo-federal.png"/>
+          </div>
+          <p class="descricao-rodape">
+            Transformando vidas através da educação profissional e tecnológica, 
+            contribuindo para o desenvolvimento sustentável de Rondônia.
+          </p>
+          <div class="redes-sociais">
+            <a href="#" class="link-rede-social">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="link-rede-social">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="link-rede-social">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="link-rede-social">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75,15.02 15.5,11.75 9.75,8.48"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="coluna-rodape">
+          <h4 class="titulo-coluna">Links Rápidos</h4>
+          <ul class="lista-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#instituicao">Sobre Nós</a></li>
+            <li><a href="#ensino">Cursos</a></li>
+            <li><a href="#pesquisa">Pesquisa</a></li>
+            <li><a href="#extensao">Extensão</a></li>
+            <li><a href="#noticias">Notícias</a></li>
+          </ul>
+        </div>
+
+        <div class="coluna-rodape">
+          <h4 class="titulo-coluna">Serviços</h4>
+          <ul class="lista-links">
+            <li><a href="#">Portal do Aluno</a></li>
+            <li><a href="#">Portal do Professor</a></li>
+            <li><a href="#">Biblioteca</a></li>
+            <li><a href="#">Restaurante</a></li>
+            <li><a href="#">Assistência Estudantil</a></li>
+            <li><a href="#">Ouvidoria</a></li>
+          </ul>
+        </div>
+
+        <div class="coluna-rodape">
+          <h4 class="titulo-coluna">Contato</h4>
+          <div class="info-contato">
+            <div class="item-contato">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Rua Tancredo Neves, 3450<br />Porto Velho - RO</span>
+            </div>
+            <div class="item-contato">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>(69) 2182-9600</span>
+            </div>
+            <div class="item-contato">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>reitoria@ifro.edu.br</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rodape-inferior">
+        <div class="linha-divisoria"></div>
+        <div class="info-inferior">
+          <p>&copy; 2024 Instituto Federal de Rondônia. Todos os direitos reservados.</p>
+          <div class="links-legais">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Acessibilidade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
   <script type="module" src="/src/main.ts"></script>
 </body>
-
 </html>

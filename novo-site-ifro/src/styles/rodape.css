@@ -1,0 +1,156 @@
+.rodape {
+  background: linear-gradient(135deg, var(--cor-fundo-escuro) 0%, #334155 100%);
+  color: var(--cor-fundo-primario);
+  padding: 64px 0 0;
+}
+
+.conteudo-rodape {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.coluna-rodape {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-rodape {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.logo-rodape img {
+  width: 10rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.descricao-rodape {
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 16px;
+}
+
+.link-rede-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--cor-fundo-primario);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link-rede-social:hover {
+  background: var(--verde-ifro-escuro);
+  transform: translateY(-2px);
+}
+
+.titulo-coluna {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--cor-fundo-primario);
+}
+
+.lista-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-links li {
+  margin-bottom: 16px;
+}
+
+.lista-links a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lista-links a:hover {
+  color: var(--verde-ifro-claro);
+}
+
+.info-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item-contato {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: var(--cor-texto-claro);
+}
+
+.item-contato svg {
+  color: var(--verde-ifro-claro);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.rodape-inferior {
+  padding: 24px 0;
+}
+
+.linha-divisoria {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+}
+
+.info-inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--cor-texto-claro);
+  font-size: 0.875rem;
+}
+
+.links-legais {
+  display: flex;
+  gap: 24px;
+}
+
+.links-legais a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links-legais a:hover {
+  color: var(--verde-ifro-claro);
+}
+
+@media (max-width: 768px) {
+  .conteudo-rodape {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .info-inferior {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .links-legais {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
