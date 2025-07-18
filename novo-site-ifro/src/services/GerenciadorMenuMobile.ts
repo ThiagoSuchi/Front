@@ -13,9 +13,15 @@ export class GerenciadorMenuMobile {
   private inicializar(): void {
     this.botaoMenu.addEventListener('click', () => this.alternarMenu());
     
-    // Fechar menu ao clicar em links
-    const linksNavegacao = this.navegacao.querySelectorAll('a');
+    // Fechar menu ao clicar em links (exceto links com submenu)
+    const linksNavegacao = this.navegacao.querySelectorAll('a:not(.item-com-submenu .link-navegacao)');
     linksNavegacao.forEach(link => {
+      link.addEventListener('click', () => this.fecharMenu());
+    });
+
+    // Fechar menu ao clicar em links de submenu (mas não nos links principais com submenu)
+    const linksSubmenu = this.navegacao.querySelectorAll('.link-submenu');
+    linksSubmenu.forEach(link => {
       link.addEventListener('click', () => this.fecharMenu());
     });
 

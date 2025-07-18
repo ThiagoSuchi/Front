@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/src/styles/pesquisa.css">
   <link rel="stylesheet" href="/src/styles/sobre.css">
   <link rel="stylesheet" href="/src/styles/cursos.css">
+  <link rel="stylesheet" href="/src/styles/extensao.css">
   <link rel="stylesheet" href="/src/styles/noticias.css">
   <link rel="stylesheet" href="/src/styles/rodape.css">
 </head>
@@ -40,7 +41,7 @@
             </a>
           </li>
           <li class="item-navegacao item-com-submenu">
-            <a href="#instituicao" class="link-navegacao">
+            <a href="#" class="link-navegacao">
               <span class="texto-nav">Instituição</span>
               <svg class="icone-seta" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6,9 12,15 18,9"></polyline>
@@ -54,7 +55,7 @@
             </ul>
           </li>
           <li class="item-navegacao item-com-submenu">
-            <a href="#ensino" class="link-navegacao">
+            <a href="#" class="link-navegacao">
               <span class="texto-nav">Ensino</span>
               <svg class="icone-seta" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6,9 12,15 18,9"></polyline>
@@ -68,7 +69,7 @@
             </ul>
           </li>
           <li class="item-navegacao">
-            <a href="#pesquisa" class="link-navegacao">
+            <a href="#pesquisa-rapida" class="link-navegacao">
               <span class="texto-nav">Pesquisa</span>
             </a>
           </li>
@@ -301,7 +302,7 @@
       </div>
 
       <div class="conteudo-sobre">
-        <div class="historia-instituicao">
+        <div class="historia-instituicao" id="historia">
           <h3 class="titulo-historia">Nossa História</h3>
           <p class="texto-historia">
             O Instituto Federal de Educação, Ciência e Tecnologia de Rondônia foi criado em 2008, 
@@ -316,7 +317,7 @@
           </p>
         </div>
 
-        <div class="valores-instituicao">
+        <div class="valores-instituicao" id="missao">
           <div class="item-valor">
             <div class="icone-valor">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -379,6 +380,16 @@
             </div>
           </div>
         </div>
+        
+        <div class="reitoria-info" id="reitoria">
+          <h3>Reitoria</h3>
+          <p>A Reitoria do IFRO é responsável pela gestão administrativa e acadêmica da instituição, coordenando as atividades de ensino, pesquisa e extensão em todos os campi.</p>
+        </div>
+        
+        <div class="estrutura-info" id="estrutura">
+          <h3>Estrutura Organizacional</h3>
+          <p>O IFRO é organizado em uma estrutura multicampi, com unidades distribuídas estrategicamente pelo estado de Rondônia, oferecendo educação de qualidade em diferentes regiões.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -403,6 +414,78 @@
       <div class="grade-cursos" id="grade-cursos">
         <!-- código ts -->
       </div>
+
+      <div class="detalhes-ensino">
+        <div class="secao-tecnicos" id="tecnicos">
+          <h3>Cursos Técnicos</h3>
+          <p>Formação técnica de nível médio em diversas áreas, preparando profissionais qualificados para o mercado de trabalho.</p>
+        </div>
+
+        <div class="secao-graduacao" id="graduacao">
+          <h3>Graduação</h3>
+          <p>Cursos superiores de tecnologia, bacharelado e licenciatura, proporcionando formação acadêmica sólida e competências profissionais.</p>
+        </div>
+
+        <div class="secao-pos" id="pos-graduacao">
+          <h3>Pós-Graduação</h3>
+          <p>Especialização, mestrado e doutorado para aprofundamento do conhecimento e formação de pesquisadores.</p>
+        </div>
+
+        <div class="secao-ead" id="ead">
+          <h3>Educação a Distância</h3>
+          <p>Modalidade flexível de ensino que permite acesso à educação de qualidade independente da localização geográfica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extensão -->
+  <section class="extensao" id="extensao">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <h2 class="titulo-secao">Extensão</h2>
+        <p class="subtitulo-secao">
+          Projetos e ações que conectam o IFRO com a comunidade, promovendo desenvolvimento social e tecnológico
+        </p>
+      </div>
+
+      <div class="conteudo-extensao">
+        <div class="projetos-extensao">
+          <div class="projeto-item">
+            <div class="icone-projeto">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Programas Sociais</h3>
+            <p>Iniciativas que promovem inclusão social e capacitação profissional para a comunidade local.</p>
+          </div>
+
+          <div class="projeto-item">
+            <div class="icone-projeto">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3>Inovação Tecnológica</h3>
+            <p>Desenvolvimento de soluções tecnológicas para empresas e organizações da região.</p>
+          </div>
+
+          <div class="projeto-item">
+            <div class="icone-projeto">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <h3>Cursos Livres</h3>
+            <p>Capacitações abertas à comunidade em diversas áreas do conhecimento técnico e tecnológico.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -421,7 +504,7 @@
       </div>
 
       <div class="rodape-noticias">
-        <button class="botao botao-secundario">
+        <button class="botao botao-noticias">
           Ver Todas as Notícias
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -477,7 +560,7 @@
             <li><a href="#inicio">Início</a></li>
             <li><a href="#instituicao">Sobre Nós</a></li>
             <li><a href="#ensino">Cursos</a></li>
-            <li><a href="#pesquisa">Pesquisa</a></li>
+            <li><a href="#pesquisa-rapida">Pesquisa</a></li>
             <li><a href="#extensao">Extensão</a></li>
             <li><a href="#noticias">Notícias</a></li>
           </ul>

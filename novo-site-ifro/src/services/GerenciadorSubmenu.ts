@@ -17,26 +17,42 @@ export class GerenciadorSubmenu {
 
       // Evento de clique no link principal
       linkPrincipal.addEventListener('click', (e) => {
+        // Sempre previne o comportamento padrão para links com submenu
         e.preventDefault();
+        e.stopPropagation();
+        
+        // Alterna o submenu independente do dispositivo
         this.alternarSubmenu(item, submenu);
       });
 
-      // Hover para desktop (apenas visual feedback no link, não na seta)
+      // Evento específico para a seta (sempre controla submenu)
+      const seta = linkPrincipal.querySelector('.icone-seta');
+      if (seta) {
+        seta.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.alternarSubmenu(item, submenu);
+        });
+      }
+
+      // Hover para desktop - verifica dinamicamente se é mobile
       item.addEventListener('mouseenter', () => {
-        if (!item.classList.contains('ativo')) {
-          item.classList.add('hover');
+        if (!this.isMobile() && !item.classList.contains('ativo')) {
+          this.abrirSubmenu(item, submenu);
         }
       });
 
       item.addEventListener('mouseleave', () => {
-        item.classList.remove('hover');
+        if (!this.isMobile()) {
+          this.fecharSubmenu(item);
+        }
       });
 
       // Navegação por teclado
       this.configurarNavegacaoTeclado(item, submenu, linkPrincipal);
     });
 
-    // Fechar submenu ao clicar fora
+    // Fechar submenu ao clicar fora (principalmente para mobile)
     document.addEventListener('click', (e) => {
       const target = e.target as Element;
       if (!target.closest('.item-com-submenu') && this.submenuAtivo) {
@@ -50,6 +66,18 @@ export class GerenciadorSubmenu {
         this.fecharSubmenu(this.submenuAtivo);
       }
     });
+
+    // Ajustar comportamento no redimensionamento da janela
+    window.addEventListener('resize', () => {
+      // Fecha submenus ativos quando muda de mobile para desktop ou vice-versa
+      if (this.submenuAtivo) {
+        this.fecharSubmenu(this.submenuAtivo);
+      }
+    });
+  }
+
+  private isMobile(): boolean {
+    return window.innerWidth <= 768;
   }
 
   private alternarSubmenu(item: Element, submenu: Element): void {
@@ -68,21 +96,17 @@ export class GerenciadorSubmenu {
     item.classList.add('ativo');
     submenu.classList.add('ativo');
     this.submenuAtivo = item;
-
-    // A seta vai girar automaticamente pelo CSS quando .ativo for adicionado
   }
 
   private fecharSubmenu(item: Element): void {
     const submenu = item.querySelector('.submenu');
     
-    item.classList.remove('ativo', 'hover');
+    item.classList.remove('ativo');
     submenu?.classList.remove('ativo');
     
     if (this.submenuAtivo === item) {
       this.submenuAtivo = null;
     }
-
-    // A seta vai voltar automaticamente pelo CSS quando .ativo for removido
   }
 
   private configurarNavegacaoTeclado(item: Element, submenu: Element, linkPrincipal: Element): void {

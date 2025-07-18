@@ -224,28 +224,13 @@
   text-align: center;
 }
 
-.botao {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 16px 32px;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  font-family: inherit;
-  border: none;
-}
-
-.botao-secundario {
+.botao-noticias {
   background: transparent;
   color: var(--verde-ifro-escuro);
   border: 2px solid var(--verde-ifro-escuro);
 }
 
-.botao-secundario:hover {
+.botao-noticias:hover {
   background: var(--verde-ifro-escuro);
   color: var(--cor-fundo-primario);
   box-shadow: 0 8px 20px rgba(45, 80, 22, 0.3);
