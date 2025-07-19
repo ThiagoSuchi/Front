@@ -206,24 +206,6 @@ html {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* Scrollbar personalizada */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, var(--verde-ifro-medio), var(--verde-ifro-escuro));
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, var(--verde-ifro-claro), var(--verde-ifro-medio));
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
   .container-cabecalho,

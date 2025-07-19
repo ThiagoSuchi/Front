@@ -1,11 +1,11 @@
 // Classe principal da aplicação IFRO
 export class AplicacaoIFRO {
-  private gerenciadorPesquisa!: any;
-  private gerenciadorMenuMobile!: any;
-  private gerenciadorFiltrosCursos!: any;
-  private gerenciadorNoticias!: any;
-  private gerenciadorNavegacaoSuave!: any;
-  private gerenciadorSubmenu!: any;
+  private gerenciadorPesquisa: any;
+  private gerenciadorMenuMobile: any;
+  private gerenciadorFiltrosCursos: any;
+  private gerenciadorNoticias: any;
+  private gerenciadorNavegacaoSuave: any;
+  private gerenciadorSubmenu: any;
 
   constructor() {
     this.inicializar();

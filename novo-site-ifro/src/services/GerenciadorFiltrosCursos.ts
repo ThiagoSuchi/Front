@@ -1,5 +1,3 @@
-import { Curso } from '../interfaces/index.js';
-
 // Classe para gerenciar os filtros de cursos
 export class GerenciadorFiltrosCursos {
   private containerCursos: HTMLElement;
@@ -51,21 +49,6 @@ export class GerenciadorFiltrosCursos {
 
     // Re-renderizar cursos com novo filtro
     this.renderizarCursos();
-  }
-
-  private aplicarFiltro(): void {
-    const cartoesCursos = this.containerCursos.querySelectorAll('.cartao-curso');
-    
-    cartoesCursos.forEach(cartao => {
-      const cartaoElement = cartao as HTMLElement;
-      const tipoCurso = cartaoElement.dataset.tipo;
-      
-      if (this.filtroAtivo === 'todos' || tipoCurso === this.filtroAtivo) {
-        cartaoElement.style.display = 'block';
-      } else {
-        cartaoElement.style.display = 'none';
-      }
-    });
   }
 
   private renderizarCursos(): void {
@@ -122,27 +105,8 @@ export class GerenciadorFiltrosCursos {
           </div>
         </div>
       `).join('');
-
-      // Configurar eventos dos botões "Saiba Mais"
-      this.configurarBotoesSaibaMais();
     }).catch(error => {
       console.error('Erro ao carregar cursos:', error);
     });
-  }
-
-  private configurarBotoesSaibaMais(): void {
-    const botoesSaibaMais = this.containerCursos.querySelectorAll('.botao-curso');
-    botoesSaibaMais.forEach((botao, index) => {
-      botao.addEventListener('click', () => {
-        this.mostrarDetalhesCurso(index + 1);
-      });
-    });
-  }
-
-  private mostrarDetalhesCurso(cursoId: number): void {
-    // Implementar modal ou redirecionamento para detalhes do curso
-    console.log(`Mostrando detalhes do curso: ${cursoId}`);
-    // Aqui você pode implementar um modal ou redirecionamento
-    alert(`Detalhes do curso ${cursoId} - Funcionalidade em desenvolvimento`);
   }
 }

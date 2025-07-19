@@ -31,7 +31,6 @@ export class GerenciadorPesquisa {
       tag.addEventListener('click', () => {
         const termoPesquisa = tag.dataset.pesquisa!;
         this.inputPesquisa.value = termoPesquisa;
-        this.executarPesquisa();
       });
     });
 
@@ -63,7 +62,7 @@ export class GerenciadorPesquisa {
 
   private executarPesquisa(): void {
     const termo = this.inputPesquisa.value.trim();
-    
+
     if (!termo) {
       this.mostrarAlerta('Por favor, digite um termo para pesquisar.');
       return;
@@ -75,7 +74,7 @@ export class GerenciadorPesquisa {
 
   private realizarPesquisaInterna(termo: string): void {
     const termoLower = termo.toLowerCase();
-    
+
     // Pesquisar por cursos
     if (termoLower.includes('curso') || termoLower.includes('técnico') || termoLower.includes('graduação')) {
       this.navegarPara('#ensino');
@@ -107,8 +106,7 @@ export class GerenciadorPesquisa {
 
   private destacarFiltro(termo: string): void {
     const termoLower = termo.toLowerCase();
-    const botoesFiltro = document.querySelectorAll('.filtro-botao');
-    
+
     if (termoLower.includes('técnico')) {
       const botaoTecnico = document.querySelector('[data-filtro="tecnico"]') as HTMLElement;
       if (botaoTecnico) {
@@ -123,6 +121,16 @@ export class GerenciadorPesquisa {
   }
 
   private navegarPara(secao: string): void {
+    /*
+      >> elemento.getBoundingClientRect().top <<
+      → Retorna a distância do topo do elemento até o topo da janela visível.
+      >> window.pageYOffset <<
+      → Retorna a quantidade de pixels rolados para baixo na página (scroll atual).
+      Somando os dois:
+      → Obtemos a posição real do elemento em relação ao topo da página inteira.
+      >> - 70 <<
+      → Subtrai 70px (geralmente usado para compensar a altura de um menu fixo no topo, como uma navbar).
+     */
     const elemento = document.querySelector(secao);
     if (elemento) {
       const posicao = elemento.getBoundingClientRect().top + window.pageYOffset - 70;
@@ -154,9 +162,9 @@ export class GerenciadorPesquisa {
       z-index: 10000;
       animation: slideIn 0.3s ease;
     `;
-    
+
     document.body.appendChild(toast);
-    
+
     setTimeout(() => {
       toast.remove();
     }, 3000);
@@ -165,7 +173,7 @@ export class GerenciadorPesquisa {
   private mostrarResultadoPesquisa(termo: string): void {
     const mensagem = `Pesquisando por "${termo}"... Funcionalidade em desenvolvimento.`;
     this.mostrarAlerta(mensagem);
-    
+
     // Limpar campo de pesquisa
     setTimeout(() => {
       this.inputPesquisa.value = '';

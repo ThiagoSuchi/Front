@@ -30,39 +30,17 @@ export class GerenciadorSubmenu {
       if (seta) {
         seta.addEventListener('click', (e) => {
           e.preventDefault();
+          // stopPropagation - impede que o evento continue se propagando na árvore DOM
           e.stopPropagation();
           this.alternarSubmenu(item, submenu);
         });
       }
-
-      // Hover para desktop - verifica dinamicamente se é mobile
-      item.addEventListener('mouseenter', () => {
-        if (!this.isMobile() && !item.classList.contains('ativo')) {
-          this.abrirSubmenu(item, submenu);
-        }
-      });
-
-      item.addEventListener('mouseleave', () => {
-        if (!this.isMobile()) {
-          this.fecharSubmenu(item);
-        }
-      });
-
-      // Navegação por teclado
-      this.configurarNavegacaoTeclado(item, submenu, linkPrincipal);
     });
 
     // Fechar submenu ao clicar fora (principalmente para mobile)
     document.addEventListener('click', (e) => {
       const target = e.target as Element;
       if (!target.closest('.item-com-submenu') && this.submenuAtivo) {
-        this.fecharSubmenu(this.submenuAtivo);
-      }
-    });
-
-    // Fechar submenu ao pressionar ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && this.submenuAtivo) {
         this.fecharSubmenu(this.submenuAtivo);
       }
     });
@@ -74,10 +52,6 @@ export class GerenciadorSubmenu {
         this.fecharSubmenu(this.submenuAtivo);
       }
     });
-  }
-
-  private isMobile(): boolean {
-    return window.innerWidth <= 768;
   }
 
   private alternarSubmenu(item: Element, submenu: Element): void {
@@ -107,48 +81,5 @@ export class GerenciadorSubmenu {
     if (this.submenuAtivo === item) {
       this.submenuAtivo = null;
     }
-  }
-
-  private configurarNavegacaoTeclado(item: Element, submenu: Element, linkPrincipal: Element): void {
-    linkPrincipal.addEventListener('keydown', (e) => {
-      const keyEvent = e as KeyboardEvent;
-      
-      if (keyEvent.key === 'ArrowDown') {
-        keyEvent.preventDefault();
-        if (!item.classList.contains('ativo')) {
-          this.abrirSubmenu(item, submenu);
-        }
-        const primeiroLink = submenu.querySelector('.link-submenu') as HTMLElement;
-        if (primeiroLink) primeiroLink.focus();
-      } else if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
-        keyEvent.preventDefault();
-        this.alternarSubmenu(item, submenu);
-      }
-    });
-
-    // Configurar navegação dentro do submenu
-    const linksSubmenu = submenu.querySelectorAll('.link-submenu');
-    linksSubmenu.forEach((link, index) => {
-      link.addEventListener('keydown', (e) => {
-        const keyEvent = e as KeyboardEvent;
-        
-        if (keyEvent.key === 'ArrowUp') {
-          keyEvent.preventDefault();
-          if (index > 0) {
-            (linksSubmenu[index - 1] as HTMLElement).focus();
-          } else {
-            (linkPrincipal as HTMLElement).focus();
-          }
-        } else if (keyEvent.key === 'ArrowDown') {
-          keyEvent.preventDefault();
-          if (index < linksSubmenu.length - 1) {
-            (linksSubmenu[index + 1] as HTMLElement).focus();
-          }
-        } else if (keyEvent.key === 'Escape') {
-          this.fecharSubmenu(item);
-          (linkPrincipal as HTMLElement).focus();
-        }
-      });
-    });
   }
 }
